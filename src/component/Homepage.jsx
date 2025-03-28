@@ -1,41 +1,64 @@
-import React from 'react'
-import homepageimg from '../assets/homepage.jpg'
-import { GiHamburgerMenu } from "react-icons/gi";
-
+import React from 'react';
+import { motion } from 'framer-motion';
+import homepageimg from '../assets/homepage.jpg';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import Services from './Services';
+import Designed from './Designed';
+import './Font.css';
+import Footer from './Footer';
 
 const Homepage = () => {
   return (
-  <>
-  
-     <div className='relative'>
-        <img src={homepageimg} className='w-full h-[830px]'/>
-     </div>
-     
-     <div className='absolute top-0 right-24 text-white font-semibold mt-10'>
-      <ul>
-        <li className='flex gap-3'>Home <span className='mt-1'><GiHamburgerMenu /></span></li>
-        <li>About</li>
-        <li>Initiatives</li>
-        <li>Movements</li>
-        <li>Connect</li>
-        <li>Map</li>
-     </ul>
+    <>
+      <div className='relative h-screen'>
+        <img src={homepageimg} className='w-full h-full object-cover' alt='Homepage' />
       </div>
-      <div className='absolute bottom-40 text-6xl text-white font-sans ml-14'>
-         <h1>Where Art</h1>
-         <hr className='mt-2'></hr>
-         <h1 className='mt-2'>Meet Activism</h1>
-      </div>
-        <div className='bg-[#9A1D20] w-full h-10'>
-        <div className=''></div>
-        </div>
-        <div className='section2 bg-black w-full h-[600px]'>
-             <p className='text-justify text-2xl font-sans pt-28 text-white px-64'>Freedom Studio is a creative initiative that empowers social movements, and civic organizations through stategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model. Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change. </p>
-             <hr className='ml-48 mt-8 w-[1100px]'></hr>
-             <h2 className='font-semibold text-white text-center text-4xl mt-10'>Interactive Map</h2>
-        </div>
-  </>
-  )
-}
 
-export default Homepage
+      {/* Navigation */}
+      <div className='absolute top-0 right-8 text-white font-semibold mt-6 md:mt-10'>
+        <ul className='cursor-pointer flex flex-col md:flex-col gap-2 text-lg'>
+          <li className='flex gap-3'>Home <span className='mt-1'><GiHamburgerMenu /></span></li>
+          <li>About</li>
+          <li>Initiatives</li>
+          <li>Movements</li>
+          <li>Connect</li>
+          <li>Map</li>
+        </ul>
+      </div>
+
+      {/* Hero Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        className='absolute bottom-24 text-white font-sans px-6 md:px-14 text-center md:text-left'>
+        <h1 className='text-4xl md:text-6xl font-bold'>Where Art</h1>
+        <hr className='mt-2 w-1/2 mx-auto md:mx-0'></hr>
+        <h1 className='mt-2 text-4xl md:text-6xl font-bold'>Meets Activism</h1>
+      </motion.div>
+
+      {/* Red Section */}
+      <div className='bg-[#9A1D20] w-full h-12'></div>
+
+      {/* About Section */}
+      <div className='section2 bg-black w-full py-16 px-6 md:px-24'>
+        <motion.p 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: false }}
+          className='text-lg md:text-2xl text-white px-5'>
+          Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change.
+        </motion.p>
+        <hr className='mt-8 w-3/4 mx-auto'></hr>
+        <h2 className='font-semibold text-white text-center text-3xl md:text-4xl mt-10'>Interactive Map</h2>
+      </div>
+
+      <Services />
+      <Designed />
+      <Footer/>
+    </>
+  );
+};
+
+export default Homepage;
