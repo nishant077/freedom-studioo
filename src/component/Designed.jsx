@@ -59,7 +59,7 @@ const Designed = () => {
           >
             <img src={card.image} className='w-full h-40 object-cover rounded-md' alt='Activism' />
             <h3 className='text-white text-xl font-semibold text-center mt-4'>{card.title}</h3>
-            <p className='text-sm text-white font-light text-center mt-3'>{card.description}</p>
+            <p className='text-sm text-white  text-center mt-3'>{card.description}</p>
           </motion.div>
         ))}
       </div>

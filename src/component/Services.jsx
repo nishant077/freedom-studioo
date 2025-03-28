@@ -12,7 +12,7 @@ const Services = () => {
       viewport={{ once: true }}
       className='mt-10 max-h-full px-5'
     >
-      <h2 className='text-center text-3xl font-semibold font-sans'>Our Services</h2>
+      <h2 className='text-center text-4xl font-bold'>Our Services</h2>
       
       <div className='flex flex-col md:flex-row justify-center items-center mt-10 gap-10'>
         <motion.img 

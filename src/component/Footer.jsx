@@ -6,13 +6,13 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-     <div className='bg-[#9A1D20] w-full h-12'></div>
-    <div className='bg-black w-full h-auto pb-4'>
+     <div className='bg-[#9A1D20] w-full h-10'></div>
+    <div className='bg-black w-full h-auto pb-5'>
         <div className='flex justify-around flex-wrap'>
             <div className='mt-10'>
            <h1 className='text-white text-3xl'>Freedom Studio</h1>
-           <ul className='text-white mt-9 text-xl font-light'>
-            <li>New Baneshwor - 31, Kathmandu</li>
+           <ul className='text-white mt-9 text-lg font-light'>
+            <li>New Baneshwor - 31, Kathmandu,</li>
             <li>Nepal</li>
             <li>Email: contact@studiofreedom.org</li>
             <li>Contact No: 9866567628</li>
