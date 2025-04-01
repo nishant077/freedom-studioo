@@ -34,9 +34,8 @@ const OurWork = () => {
             ))}
           </motion.div>
         </div>
-        <h2 className='text-center text-4xl font-semibold my-20 max-w-2xl mx-auto text-white'>
-          I am a frontend developer. I am using react js to make project i.e
-          Freedom<span className='text-[#9a1d20]'>Studio</span>
+        <h2 className='text-center text-3xl font-semibold my-14 max-w-lg mx-auto text-white'>
+        An initiative where freedom thrives through creative actions and <span className='text-[#9a1d20]'>resilience</span>
         </h2>
       </div>
     </>

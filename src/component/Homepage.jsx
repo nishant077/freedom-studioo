@@ -7,7 +7,7 @@ import Designed from './Designed';
 import './Font.css';
 import Footer from './Footer';
 import OurWork from './OurWork';
-// import logo from '../assets/logo.png';
+// import logo from '../assets/FSN.PNG';
 
 const Homepage = () => {
   const headline =" Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
@@ -20,8 +20,8 @@ const Homepage = () => {
         <img src={homepageimg} className='w-full h-full object-cover' alt='Homepage' />
       </div>
 
-      {/* <div className='bg-white flex justify-start absolute top-0 left-8 mt-6 md:mt-10'>
-         <img src={logo} className='w-52 h-28'/>
+       {/* <div className='flex justify-start absolute top-0 left-14  mt-6 md:mt-10'>
+         <img src={logo} className='w-36 h-16'/>
       </div> */}
       {/* Navigation */}
       <div className='absolute top-0 right-8 text-white font-semibold mt-6 md:mt-10'>
@@ -68,7 +68,7 @@ const Homepage = () => {
             // animate={{ filter:"blur(0px)", opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }} 
             viewport={{ once: false }}
-            className='text-lg md:text-2xl text-white inline-block  mr-1.5'
+            className='text-base md:text-2xl text-white inline-block  mr-1.5'
           >
             {letter === " " ? "\u00A0" : letter}
           </motion.p>

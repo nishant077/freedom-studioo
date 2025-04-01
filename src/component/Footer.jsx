@@ -3,6 +3,7 @@ import { FaFacebook,FaWhatsapp,FaTwitter } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
     <>
