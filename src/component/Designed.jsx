@@ -1,160 +1,200 @@
-import {React,useRef} from 'react';
-import { motion,useInView } from 'framer-motion';
-import women1 from '../assets/women1.jpg';
-import women2 from '../assets/women2.jpg';
-import women3 from '../assets/women3.jpg';
-import women4 from '../assets/women4.jpg';
-import clientlogo from '../assets/clientlogo.JPG';
-import projectlogo from '../assets/projectlogo.JPG';
-import capture from '../assets/capture1.JPG';
-import countryReached from '../assets/countryReached.JPG';
-import CountUp from 'react-countup';
 
 
-const cardArray = [
-  {
-    image: women1,
-    title: 'Activism Fellowship',
-    description: 'Emerging artists and activists around Nepal'
-  },
-  {
-    image: women2,
-    title: 'Activism Fellowship',
-    description: 'Emerging artists and activists around Nepal'
-  },
-  {
-    image: women3,
-    title: 'Activism Fellowship',
-    description: 'Emerging artists and activists around Nepal'
-  },
-  {
-    image: women4,
-    title: 'Activism Fellowship',
-    description: 'Emerging artists and activists around Nepal'
-  }
-];
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const Designed = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5 })
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+  const containerRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  const requestRef = useRef();
+  const previousTimeRef = useRef();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  // Animation loop with slower speed (0.15 instead of 0.3)
+  const animateScroll = (time) => {
+    if (previousTimeRef.current !== undefined && !isHovered) {
+      const deltaTime = time - previousTimeRef.current;
+      const scrollSpeed = 0.1; // Reduced speed for slower scrolling
+      const newPos = scrollPos + (scrollSpeed * deltaTime);
+      const maxScroll = containerRef.current.scrollWidth - containerRef.current.clientWidth;
+      
+      if (newPos >= maxScroll) {
+        setScrollPos(0);
+        containerRef.current.scrollLeft = 0;
+      } else {
+        setScrollPos(newPos);
+        containerRef.current.scrollLeft = newPos;
+      }
+    }
+    previousTimeRef.current = time;
+    requestRef.current = requestAnimationFrame(animateScroll);
+  };
+
+  useEffect(() => {
+    requestRef.current = requestAnimationFrame(animateScroll);
+    return () => cancelAnimationFrame(requestRef.current);
+  }, [scrollPos, isHovered]);
+
+  // Save position when hover starts
+  const handleMouseEnter = () => {
+    if (containerRef.current) {
+      setScrollPos(containerRef.current.scrollLeft);
+    }
+    setIsHovered(true);
+  };
+  const testimonials = [
+        {
+          id: 1,
+          name: 'Elona Mosco',
+          role: 'Head of Community @Goldman',
+          content: 'Yes, no doubt it is indeed expensive, but there\'s a clear reason why it\'s the best tax firm in the world.',
+          image: 'https://randomuser.me/api/portraits/women/44.jpg'
+        },
+        {
+          id: 2,
+          name: 'Michael Chen',
+          role: 'CEO, Startup Ventures',
+          content: 'Exceptional service from start to finish. They understood our vision perfectly and delivered beyond our expectations.',
+          image: 'https://randomuser.me/api/portraits/men/32.jpg'
+        },
+        {
+          id: 3,
+          name: 'Emma Rodriguez',
+          role: 'Product Manager, DesignHub',
+          content: 'The quality of work and professionalism is outstanding. They met all our tight deadlines.',
+          image: 'https://randomuser.me/api/portraits/women/63.jpg'
+        },
+        {
+          id: 4,
+          name: 'David Wilson',
+          role: 'CTO, InnovateSoft',
+          content: 'Their technical expertise solved complex challenges we were facing. The team is knowledgeable and responsive.',
+          image: 'https://randomuser.me/api/portraits/men/75.jpg'
+        },
+      ];
+
+      const containerVariants = {
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2
+              }
+            }
+          };
+        
+          const cardVariants = {
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                ease: "easeOut"
+              }
+            }
+          };
+
   return (
     <>
-    <motion.div 
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      viewport={{ once: false }}
-      className='bg-black w-full min-h-screen px-5 py-10 mt-1'
-    >
-      <h2 className='text-4xl text-white font-bold text-center'>We Designed</h2>
-      <div className='mt-12 flex flex-wrap justify-center gap-8'>
-        {cardArray.map((card, index) => (
-          <motion.div 
-            key={index} 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            viewport={{ once: false }}
-            className='bg-[#9a1d20] rounded-lg shadow-lg w-72 h-80 p-5 flex flex-col items-center transform hover:scale-105 transition-all duration-300'
-          >
-            <img src={card.image} className='w-full h-40 object-cover rounded-md' alt='Activism' />
-            <h3 className='text-white text-xl font-semibold text-center mt-4'>{card.title}</h3>
-            <p className='text-sm text-white  text-center mt-3'>{card.description}</p>
-          </motion.div>
-        ))}
+     <section className="bg-white relative mb-4" ref={ref}>
+      <div className="container mx-auto px-4 pt-12">
+        <h2 className='text-center md:text-4xl text-3xl font-bold'>Client Testimonial</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={controls}
+          transition={{ duration: 0.10, ease: "easeOut" }}
+          className="text-3xl font-bold text-center mb-16 text-gray-800"
+        >
+        </motion.h2>
       </div>
-      {/* <div className='text-3xl text-white mt-20'>
-         <h2 className='text-center'>Key Impact</h2>
-         <div className='bg-[#1D1D1D] px-10 py-5 mt-5'>
-         <div className='flex justify-center mt-5'>
-          <div className='flex  gap-36'>
-            <div>
-          <img src={clientlogo}/>
-          <span className='text-xl'>20+ Client</span>
-          </div>
-           <div>
-          <img src={projectlogo}/>
-          <span className='text-xl'>25+ Projects</span>
-          </div>
-          </div>
-         </div>
-         <div className='flex justify-center mt-5'>
-         <div className='flex gap-20'>
-          <div>
-         <img src={capture} className='w-36 h-32 object-cover'/>
-         <span className='text-xl'>250+ Content Produced</span>
-         </div>
-         <div>
-         <img src={countryReached}  className='w-36 h-32 object-cover' />
-         <span className='text-xl'>35+ Countries Reached</span>
-         </div>
-         </div>
-         </div>
-         </div>
-     </div> */}
-    <div className='text-white mt-20 px-5 md:px-10 lg:px-20'>
-      <h2 className='text-center text-3xl md:text-4xl font-bold'>Key Impact</h2>
+  
+      <div className="absolute inset-0 overflow-hidden -z-10"></div>
+        
+      <div className="container mx-auto px-4">
+        <div 
+          ref={containerRef}
+          className="overflow-x-hidden pb-4 relative cursor-pointer"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none'
+          }}
+        >
+          <style jsx>{`
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
 
-      {/* Impact Box */}
-      <div className='bg-[#1D1D1D] px-5 md:px-20 py-10 mt-5 rounded-lg'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 text-center relative'>
-
-          {/* Left Top */}
           <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className='flex flex-col items-center md:border-r-2 border-white pb-6 md:pb-0'
-    >
-      <img src={clientlogo} className='w-26 h-20' alt='Clients' />
-      <span className='text-xl md:text-2xl font-semibold mt-3'>
-        {isInView && <CountUp start={0} end={20} duration={3} />}
-        + Clients
-      </span>
-      <hr className='border-white border w-64 mt-5' />
-    </motion.div>
-
-          {/* Right Top */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-           className='flex flex-col items-center border-b-2 border-white lg:ml-28 pb-6 w-64 md:pb-0 '>
-            <img src={projectlogo} className='w-26 h-20' alt='Projects' />
-            <span className='text-xl md:text-2xl font-semibold mt-3'>
-           {isInView && <CountUp start={0} end={25} duration={3}/>}+ Projects</span>
+            initial="hidden"
+            animate={controls}
+            variants={containerVariants}
+            className="flex gap-8 w-max px-4"
+          >
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <motion.div
+                key={`${testimonial.id}-${index}`}
+                variants={cardVariants}
+                className="rounded-xl overflow-hidden border border-gray-200 flex-shrink-0 relative bg-white"
+                style={{ 
+                  height: '340px', // Slightly increased height
+                  width: '380px',
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
+                }}
+              >
+                {/* Top colored section */}
+                <div className="h-[60%] bg-[#9a1d20] p-8 flex flex-col relative">
+                  {/* Quote icon positioned at top right */}
+                  <div className="absolute top-6 left-8">
+                    <FaQuoteLeft size={20} className="text-white opacity-30 text-3xl" />
+                  </div>
+                  <p className="text-white text-lg leading-relaxed mt-8 z-10">
+                    {testimonial.content}
+                  </p>
+                  
+                  {/* Image positioned to overlap sections */}
+                  <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name} 
+                      className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Bottom white section */}
+                <div className="h-[40%] bg-white pt-14 pb-6 px-8 flex flex-col items-center justify-center">
+                  <div className="text-center">
+                    <h4 className="font-bold text-gray-900 text-base">{testimonial.name}</h4>
+                    <p className="text-gray-600 text-xs mt-2">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
-
-          {/* Left Bottom */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-            className='flex flex-col items-center md:border-r-2 border-white pt-6 md:pt-0'>
-            <img src={capture} className='w-26 h-20' alt='Content Produced' />
-            <span className='text-xl md:text-2xl font-semibold mt-3'> 
-            {isInView &&<CountUp start={0} end={250} duration={3}/>}+ Content Produced
-              </span>
-          </motion.div>
-
-          {/* Right Bottom */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
-            className='flex flex-col items-center pt-6 md:pt-0'>
-            <img src={countryReached} className='w-26 h-20' alt='Countries Reached' />
-            <span className='text-xl md:text-2xl font-semibold mt-3'>
-           {isInView && <CountUp start={0} end={35} duration={3}/>}+ Countries Reached</span>
-          </motion.div>
-
-          {/* Center FS text (optional if needed) */}
-          {/* <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-400 text-xs md:text-sm'>FS</span> */}
         </div>
       </div>
-    </div>
-    </motion.div>
+    </section>
     </>
   );
 };

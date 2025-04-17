@@ -1,88 +1,147 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import homepageimg from '../assets/homepage.jpg';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import Services from './Services';
+import {React, useRef} from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Designed from './Designed';
 import './Font.css';
 import Footer from './Footer';
 import OurWork from './OurWork';
-// import logo from '../assets/FSN.PNG';
+import Tags from './Tags';
+import Navbar from '../Navigation/Navbar';
+import Homepagevideo from '../assets/EveryChild.mp4'
+import logo from '../assets/logo.PNG'
 
 const Homepage = () => {
-  const headline =" Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
+  const headline = "Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
   
-  const letters=headline.split(" ");
+  const letters = headline.split(" ");
+
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
   
+ 
+  const textOpacity = useTransform(scrollYProgress, [0, 0.3, 0.6], [0, 1, 1]);
+  const textY = useTransform(scrollYProgress, [0, 0.6], [150, 0]);
+  const textScale = useTransform(scrollYProgress, [0, 0.6], [0.7, 1]);
+  
+ 
+  const videoY = useTransform(scrollYProgress, [0, 0.9], [0, -200]);
+  const videoOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
+  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
   return (
     <>
-      <div className='relative h-screen'>
-        <img src={homepageimg} className='w-full h-full object-cover' alt='Homepage' />
-      </div>
-
-       {/* <div className='flex justify-start absolute top-0 left-14  mt-6 md:mt-10'>
-         <img src={logo} className='w-36 h-16'/>
-      </div> */}
-      {/* Navigation */}
-      <div className='absolute top-0 right-8 text-white font-semibold mt-6 md:mt-10'>
-        <ul className='cursor-pointer flex flex-col md:flex-col gap-2 text-lg'>
-          <li className='flex gap-3'>Home <span className='mt-1'><GiHamburgerMenu /></span></li>
-          <li>About</li>
-          <li>Initiatives</li>
-          <li>Movements</li>
-          <li>Connect</li>
-          <li>Map</li>
-        </ul>
-      </div>
-
-      {/* Hero Section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-        className='absolute bottom-24 text-white font-sans px-6 md:px-14 text-center md:text-left'>
-        <h1 className='text-4xl md:text-6xl font-bold'>Where Art</h1>
-        <hr className='mt-2 w-1/2 mx-auto md:mx-0'></hr>
-        <h1 className='mt-2 text-4xl md:text-6xl font-bold'>Meets Activism</h1>
-      </motion.div>
-
-      {/* Red Section */}
-      <div className='bg-[#9A1D20] w-full h-10'></div>
-
-      {/* About Section */}
-      <div className='section2 bg-black w-full py-16 px-6 md:px-24'>
-        {/* <motion.p 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          viewport={{ once: false }}
-          className='text-lg md:text-2xl text-white px-5'>
-          Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change.
-        </motion.p> */}
-        
-        {letters.map((letter, index) => (
-          <motion.p 
-            key={index} 
-            initial={{ filter:"blur(10px)", opacity: 0, y: 12 }} 
-            whileInView={{ filter:"blur(0px)",opacity: 1, y: 0 }} 
-            // animate={{ filter:"blur(0px)", opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }} 
-            viewport={{ once: false }}
-            className='text-base md:text-2xl text-white inline-block  mr-1.5'
+  
+      <div className="relative h-[200vh] bg-black" ref={containerRef}>
+          
+        <motion.div 
+          className="fixed top-0 left-0 w-full h-screen overflow-hidden"
+          style={{
+            y: videoY,
+            opacity: videoOpacity,
+            scale: videoScale
+          }}
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           >
-            {letter === " " ? "\u00A0" : letter}
-          </motion.p>
-        ))}
+            <source src={Homepagevideo} type="video/mp4" />
+          </video>
+        </motion.div>
 
+     
+        <motion.div 
+          className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none"
+          style={{
+            opacity: textOpacity,
+            y: textY,
+            scale: textScale
+          }}
+        >
+          <h1 className="text-white text-4xl md:text-7xl font-bold text-center px-4 leading-tight">
+            When Creativity 
+            <br></br>
+            Meets change
+          </h1>
+        </motion.div>
 
-        <hr className='mt-8 w-3/4 mx-auto'></hr>
-        <h2 className='font-semibold text-white text-center text-3xl md:text-4xl mt-10'>Interactive Map</h2>
+       
+        <motion.div 
+          style={{
+            opacity: useTransform(scrollYProgress, [0.4, 0.7], [0, 1]),
+            y: useTransform(scrollYProgress, [0.4, 0.7], [50, 0])
+          }}
+          className='absolute bottom-24 text-white font-sans px-6 md:px-14 text-center md:text-left'
+        >
+          {/* <h1 className='text-4xl md:text-6xl font-bold'>Where Creativity</h1>
+          <hr className='mt-2 w-4/5 mx-auto md:mx-0'></hr>
+          <h1 className='mt-2 text-4xl md:text-6xl font-bold'>Meets Change</h1> */}
+        </motion.div>
       </div>
+      <div>
+            <img src={logo} className="w-64 h-48 object-cover absolute top-0 left-10"/>
+          </div>
+      {/* Navigation */}
+      <Navbar/>
 
-      <Services />
-      <Designed />
-      <OurWork/>
-      <Footer/>
+      {/* Main content area - appears after video section */}
+      <div className="relative z-10 bg-black">
+        {/* Red Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ margin: "-100px" }}
+          className='bg-[#9A1D20] w-full h-10'
+        ></motion.div>
+
+        {/* About Section */}
+        <div className='section2 bg-black w-full py-16 px-6 md:px-24'>
+          {letters.map((letter, index) => (
+            <motion.p 
+              key={index} 
+              initial={{ filter:"blur(10px)", opacity: 0, y: 12 }} 
+              whileInView={{ filter:"blur(0px)", opacity: 1, y: 0 }} 
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.05,
+                ease: "backOut"
+              }} 
+              viewport={{ once: true, margin: "-50px" }}
+              className='text-sm md:text-2xl text-white inline-block mr-1.5'
+            >
+              {letter === " " ? "\u00A0" : letter}
+            </motion.p>
+          ))}
+
+          <motion.hr 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1.2, delay: letters.length * 0.05 }}
+            viewport={{ once: true }}
+            className='mt-8 w-3/4 mx-auto'
+          ></motion.hr>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className='font-semibold text-white text-center text-3xl md:text-4xl mt-10'
+          >
+            Interactive Map
+          </motion.h2>
+        </div>
+
+        <Designed />
+        <OurWork/>
+        <Footer/>
+      </div>
     </>
   );
 };
