@@ -41,8 +41,8 @@ const DynamicPage = () => {
           <>
             <HeroSection location={location} />
             <div className='flex item-center'>
-
-            <LikeButton movementCardId={location?.movementCardId} totalLike={location?.like}/> <>.</><ShareButton totalShare={location?.share}/> <>.</><Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/>
+{/* <LikeButton movementCardId={location?.movementCardId} totalLike={location?.like}/> */}
+            <ShareButton id={id} movementCardId={location?.movementCardId}  totalShare={location?.share}/> <>.</><Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/> 
             </div>
               
             <Sectionn2 location={location} />
