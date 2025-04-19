@@ -8,6 +8,7 @@ import Tags from './Tags';
 import Navbar from '../Navigation/Navbar';
 import Homepagevideo from '../assets/EveryChild.mp4'
 import logo from '../assets/logo.PNG'
+import MapMain from '../Map/MapMain';
 
 const Homepage = () => {
   const headline = "Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
@@ -136,6 +137,7 @@ const Homepage = () => {
           >
             Interactive Map
           </motion.h2>
+         <MapMain/>
         </div>
 
         <Designed />
