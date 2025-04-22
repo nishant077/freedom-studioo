@@ -10,6 +10,8 @@ import Homepagevideo from '../assets/EveryChild.mp4'
 import logo from '../assets/logo.PNG'
 import MapMain from '../Map/MapMain';
 import HomePageMap from './HomePageMap';
+import KeyImpact from './KeyImpact';
+import Expertise from './Expertise';
 
 const Homepage = () => {
   const headline = "Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
@@ -103,7 +105,7 @@ const Homepage = () => {
         ></motion.div>
 
         {/* About Section */}
-        <div className='section2 bg-black w-full py-16 px-6 md:px-24'>
+        <div className='section2 bg-black w-full py-16 px-6 md:px-36'>
           {letters.map((letter, index) => (
             <motion.p 
               key={index} 
@@ -115,7 +117,7 @@ const Homepage = () => {
                 ease: "backOut"
               }} 
               viewport={{ once: true, margin: "-50px" }}
-              className='text-sm md:text-2xl text-white inline-block mr-1.5'
+              className='text-xs md:text-xl text-white inline-block mr-1.5'
             >
               {letter === " " ? "\u00A0" : letter}
             </motion.p>
@@ -146,8 +148,10 @@ const Homepage = () => {
           </div>
         
         </div>
-
+        <Expertise/>
+        <KeyImpact/>
         <Designed />
+        
         <OurWork/>
         <Footer/>
       </div>

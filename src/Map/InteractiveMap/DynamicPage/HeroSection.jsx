@@ -8,7 +8,7 @@ const HeroSection = ({location}) => {
   return (
     <>
       <section>
-        <div className="flex relative mt-5 h-[500px] w-full">
+        <div className="flex relative h-[500px] w-full">
           {/* Background Image */}
           <img src={fetchImage(location.heroSectionImage)} className="md:w-full min-w-full h-full object-cover" alt="Background" />
           {/* Gradient Overlay */}

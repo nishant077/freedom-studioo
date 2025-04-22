@@ -156,7 +156,7 @@ const LeafletMap = ({ district, momentIssue, actors, latitude, longitude }) => {
 
   return (
     <>
-      <div ref={mapRef} id="map" className="relative z-10" style={{ height: '100vh' }}></div>
+      <div ref={mapRef} id="map" className="relative z-10" style={{ height: '70vh' }}></div>
       {selectedLocation && (
        
         <Modal 

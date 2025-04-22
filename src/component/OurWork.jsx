@@ -121,7 +121,7 @@ import img5 from '../assets/workimg5.jpg';
 import img6 from '../assets/workimg6.jpg';
 import img7 from '../assets/workimg7.jpg';
 import { motion } from "framer-motion";
-import KeyImpact from './KeyImpact';
+
 
 
 
@@ -132,9 +132,8 @@ const OurWork = () => {
   return (
     <>
       <div className='bg-black w-full h-auto py-5 px-4'>
-           <KeyImpact/>
         <h2 className='text-4xl text-white font-bold text-center'>
-          Our Work
+          Our Gallery
         </h2>
         <div className='overflow-hidden w-full flex justify-center mt-10'>
           <motion.div

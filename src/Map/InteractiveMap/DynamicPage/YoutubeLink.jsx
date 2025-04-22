@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 const YouTubeLink = ({location}) => {
   return (
     <>
-    <div className='video flex items-center justify-center m-2  mt-20'>
+    <div className='video flex items-center justify-center m-4 '>
       <ReactPlayer controls url={location.url} />
       </div>
     </>

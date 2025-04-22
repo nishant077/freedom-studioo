@@ -11,3 +11,32 @@ p {
     font-family: "Montserrat", sans-serif;
    
   }
+
+  .popup {
+    transition: transform 0.3s ease-out, opacity 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .popup.closed {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  .custom-popup {
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .custom-popup .leaflet-popup-content-wrapper {
+    background: #000;
+    color: #fff;
+  }
+  
+  .custom-popup .leaflet-popup-tip {
+    background: #000;
+  }
+
+  

@@ -76,7 +76,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black py-16 px-4 sm:px-6 lg:px-8">
+    <div className="h-auto bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className='flex md:justify-between justify-center items-center flex-wrap'>
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">

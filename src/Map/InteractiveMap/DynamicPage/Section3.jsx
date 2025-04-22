@@ -20,17 +20,6 @@ const Section3 = ({location}) => {
             <p className="text-pretty antialiased font-sans opacity-70 text-justify m-2">
               {location.issuedDetailDescription} 
             </p>
-
-            <a
-              href="https://www.youtube.com/@freedomstudio4891"
-              target="_blank"
-              aria-label="Mail"
-              className="text-[#9a1d20] hover:text-[#8b5354]"
-            >
-              <button className="text-[#F5F5DC] font-light bg-[#9a1d20] rounded-md p-1 mt-7">
-                Watch our videos <i className="fa-solid fa-play text-lg text-[#F5F5DC]"></i>
-              </button>
-            </a>
           </div>
           <img
             src={fetchImage(location.issuedDetailImage2)}
