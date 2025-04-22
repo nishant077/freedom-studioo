@@ -38,7 +38,7 @@ const DynamicPage = () => {
       <>
         <Navbar />
         {location ? (
-          <>
+        <>
             <HeroSection location={location} />
             <div className='flex item-center'>
 {/* <LikeButton movementCardId={location?.movementCardId} totalLike={location?.like}/> */}

@@ -5,6 +5,7 @@ import MapArea from './InteractiveMap/MapArea.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import DynamicPage from './components/DynamicPage';
 import { div } from 'framer-motion/client';
+import InteractiveMapDescription from './InteractiveMapDescription.jsx';
 // import InteractiveMapDescription from './components/InteractiveMapDescription';
 
 const MapMain = () => {
@@ -17,7 +18,7 @@ const MapMain = () => {
     return (
                         <div className='md:flex md:flex-wrap gap-2'>
                         <div className='md:w-[45vh] lg:w-[55vh] hidden lg:block  bg-[#9A1D20]'>
-                        {/* <InteractiveMapDescription></InteractiveMapDescription> */}
+                        <InteractiveMapDescription></InteractiveMapDescription>
                         </div>
                         <div className='flex-grow'>
                         <div className="relative">

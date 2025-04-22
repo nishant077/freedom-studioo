@@ -5,6 +5,7 @@ import About from './About/About';
 import Service from './Services/Service';
 import Connect from './Connect/Connect';
 import DynamicPage from './Map/InteractiveMap/DynamicPage';
+import MapMain from './Map/MapMain';
 
  
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/dynamic/:id" element={<DynamicPage />} />
+          <Route path="/map" element={<MapMain />} />
         </Routes>
       </div>
     </Router>
