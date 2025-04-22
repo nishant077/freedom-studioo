@@ -18,7 +18,7 @@ const Partners = () => {
     <>
      <div className='bg-white w-full h-auto md:py-20 py-10 md:px-10 px-4'>
        <div className='mt-5'>
-       <h3 className='md:text-5xl text-2xl text-center'>Our Partners</h3>
+       <h3 className='md:text-5xl text-2xl text-center text-black'>Our Partners</h3>
        </div>
        <div className='flex md:justify-around flex-wrap justify-center items-center gap-5 md:gap-10 md:mt-10 mt-5'>
            {partnersLogo.map((item,key)=>(

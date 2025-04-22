@@ -76,9 +76,9 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="h-auto bg-black py-16 px-4 sm:px-6 lg:px-8">
-      <div className='flex md:justify-between justify-center items-center flex-wrap'>
-      <div className="max-w-2xl mx-auto">
+    <div className="h-auto bg-black py-16 px-5 sm:px-6 lg:px-8">
+      <div className='flex md:justify-evenly justify-center items-center flex-wrap'>
+      <div className="max-w-2xl ">
         <div className="text-center mb-12">
           <h2 className="md:text-4xl text-2xl font-bold text-white mb-3">Share Your Thoughts</h2>
           <p className="text-gray-300 md:text-lg text-base">We value your feedback and would love to hear from you</p>
@@ -213,7 +213,7 @@ const FeedbackForm = () => {
         </div>
       </div>
       <div className='' >
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.3608873371442!2d85.33719106993117!3d27.68694690078486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1996a8d615f9%3A0xca3d4207589f4c3b!2sMinbhawan%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1744389136209!5m2!1sen!2snp"  className="md:w-[600px] h-[450px] sm:h-[400px] md:h-[550px] border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.3608873371442!2d85.33719106993117!3d27.68694690078486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1996a8d615f9%3A0xca3d4207589f4c3b!2sMinbhawan%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1744389136209!5m2!1sen!2snp"  className="md:w-[500px] h-[400px] sm:h-[400px] md:h-[500px] border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       </div>
     </div>

@@ -13,7 +13,8 @@ import Footer from '../component/Footer';
 const About = () => {
   return (
     <>
-      <div className='bg-black text-white w-full py-7 md:py-10 px-4 md:px-20'>
+      <div className='bg-black text-white w-full'>
+        <div className='py-7 md:py-10 px-4 md:px-20'>
         <div className='flex  justify-between'>
           <div>
             <img src={logo} className='w-32 h-20 md:w-60 md:h-44 object-cover absolute top-0'/>
@@ -66,13 +67,15 @@ const About = () => {
             <img src={freedom2} className='w-16 h-32 md:w-40 md:h-80 object-cover bg-black opacity-50'/>
           </div>
         </div>
-      </div>
-      
-      <div className='bg-[#9A1D20] w-full h-10 text-white'></div>
+        </div>
+        <div className='bg-[#9A1D20] w-full h-10 text-white'></div>
       <Team/>
       <Partners/>
       <FeedbackForm/>
       <Footer/>
+      </div>
+      
+     
     </>
   )
 }
