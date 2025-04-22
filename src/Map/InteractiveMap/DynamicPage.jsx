@@ -14,6 +14,8 @@ import Navbar from '../../Navigation/Navbar'
 import LikeButton from './DynamicPage/PublicInteraction/Like.jsx'
 import ShareButton from './DynamicPage/PublicInteraction/Share.jsx'
 import Feedback from './DynamicPage/PublicInteraction/Feedback.jsx'
+import Tactics from './DynamicPage/Tactics.jsx'
+import Footer from '../../component/Footer.jsx'
 const DynamicPage = () => {
   const [location, setLocation] = useState(null);
   const { id } = useParams();  
@@ -41,23 +43,28 @@ const DynamicPage = () => {
           <>
             <HeroSection location={location} />
             <div className='flex item-center'>
-
-            <LikeButton movementCardId={location?.movementCardId} totalLike={location?.like}/> <>.</><ShareButton totalShare={location?.share}/> <>.</><Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/>
+{/* <LikeButton movementCardId={location?.movementCardId} totalLike={location?.like}/> */}
+           
             </div>
               
             <Sectionn2 location={location} />
+            <Tactics/>
 
             <Gallerytext />
             <div className="mx-auto w-full md:h-screen h-[70vh] text-white flex justify-center items-center overflow-x-hidden bg-black">
               <Marquee location={location} />
             </div>
             <Section3 location={location} />
+            <div className='flex justify-evenly mt-5'>
             <YouTubeLink location={location} />
+            <Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/>
+            <ShareButton id={id} movementCardId={location?.movementCardId}  totalShare={location?.share}/>  
+            </div>
           </>
         ) : (
           <div className="text-center text-white">Loading...</div>
         )}
-        {/* <Footer /> */}
+      <Footer/>
       </>
     );
   }   

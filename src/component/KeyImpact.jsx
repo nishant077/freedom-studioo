@@ -17,7 +17,7 @@ const KeyImpact = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: false }}
-      className='bg-black w-full min-h-screen px-5 py-2 mt-1'
+      className='bg-[#4A4A4A] w-full min-h-screen px-5 py-2 mt-1'
     >
      <div className='text-white mt-20 px-5 md:px-10 lg:px-20'>
       <h2 className='text-center text-3xl md:text-4xl font-bold'>Our Impact</h2>
@@ -94,10 +94,11 @@ const KeyImpact = () => {
         </div>
        </div>
      </div>
-     </motion.div>
      <div className="px-24 py-10 text-center ">
          <p className="text-white text-lg">Freedom Studio isn't just about creative work-it's about results. We partner with<br></br> forward-thinking organization to produce work that isn't just cool, but makes a tangible difference.</p>
      </div>
+     </motion.div>
+   
     </>
   )
 }

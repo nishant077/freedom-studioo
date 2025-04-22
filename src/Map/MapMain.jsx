@@ -15,10 +15,10 @@ const MapMain = () => {
     };
 
     return (
-                        <div className='md:flex md:flex-wrap gap-2'>
-                        <div className='md:w-[45vh] lg:w-[55vh] hidden lg:block  bg-[#9A1D20]'>
+                        <div className='md:flex md:flex-wrap gap-2 mt-12'>
+                        {/* <div className='md:w-[45vh] lg:w-[55vh] hidden lg:block  bg-[#9A1D20]'> */}
                         {/* <InteractiveMapDescription></InteractiveMapDescription> */}
-                        </div>
+                        {/* </div> */}
                         <div className='flex-grow'>
                         <div className="relative">
                             {/* MapArea positioned at the top-right corner (near the search icon) */}

@@ -38,9 +38,9 @@ return (
         duration: 3,
         delay: 0.2,
       }}
-      className="mt-5  md:h-[80vh] h-[60vh] w-full"
+      className="mt-5  md:h-auto h-[40vh] w-full"
     >
-      <div className="lg:grid grid-cols-2 flex-wrap gap-8 p-10 mt-10 ">
+      <div className="lg:grid grid-cols-2 flex-wrap gap-8 p-10">
           <motion.div
           initial={{opacity:0,x:-30}}
           whileInView={{opacity:1,x: 50}}
