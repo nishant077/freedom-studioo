@@ -20,7 +20,7 @@ const KeyImpact = () => {
       className='bg-[#4A4A4A] w-full min-h-screen px-5 py-2 mt-1'
     >
      <div className='text-white mt-20 px-5 md:px-10 lg:px-20'>
-      <h2 className='text-center text-3xl md:text-4xl font-bold'>Our Impact</h2>
+      <h2 className='text-center text-3xl md:text-4xl font-droid'>Our Impact</h2>
 
       {/* Impact Box */}
        <div className='px-5 md:px-20 py-5 mt-5 rounded-lg'>

@@ -67,7 +67,7 @@ const Team = () => {
     return (
         <div className='w-full h-auto bg-black md:py-20 py-10 md:px-10 px-4 overflow-hidden'>
             <div className='md:mt-5 mt-2'>
-                <h3 className='md:text-5xl text-2xl text-center text-white'>Our Team</h3>
+                <h2 className='md:text-4xl text-3xl font-droid text-center text-white'>Our Team</h2>
             </div>
             
             <div 

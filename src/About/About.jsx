@@ -20,7 +20,7 @@ const About = () => {
             <img src={logo} className='w-32 h-20 md:w-60 md:h-44 object-cover absolute top-0'/>
           </div> 
           <div className='mt-4 md:mt-16'>
-            <h2 className='text-2xl md:text-6xl'>
+            <h2 className='text-2xl font-droid md:text-5xl'>
               About
             </h2>
           </div>
@@ -33,7 +33,7 @@ const About = () => {
       
       <div className='w-full h-auto bg-black py-10 md:py-20 px-4 md:px-10'>
         <div className='md:mt-5 mt-2'>
-          <h3 className='text-2xl md:text-5xl text-center text-white'>Introduction</h3>
+          <h3 className='text-3xl md:text-4xl font-droid text-center text-white'>Introduction</h3>
         </div>
         <p className='text-justify text-white text-sm md:text-lg font-light mt-5 md:mt-10 px-2 md:px-36'>
           ​At Freedom Studio, we believe in the transformative power of creativity to challenge injustices, amplify marginalized voices, and drive meaningful social change. Our initiative is built on the foundation that freedom thrives through creative actions and fostering resilience. We operate through two entities:
@@ -53,8 +53,8 @@ const About = () => {
           <div className='text-white font-bold mt-10 md:mt-80 flex'>
             <div>
               <p className='font-thin text-xs md:text-sm'>We fosters leadership, strengthens activism,<br/> and provides cutting-edge creative solutions</p>
-              <h1 className='text-4xl md:text-6xl mt-3 md:mt-5'>We Are</h1>
-              <h1 className='text-4xl md:text-6xl'>Freedom Studio.</h1>
+              <h1 className='text-3xl font-droid md:text-5xl mt-3 md:mt-5'>We Are</h1>
+              <h1 className='text-3xl font-droid md:text-5xl'>Freedom Studio.</h1>
             </div>
             <div className='mt-10 md:mt-20 hidden md:block'>
               <HiArrowUpRight size={60} className='bg-[#9a1d20]' />

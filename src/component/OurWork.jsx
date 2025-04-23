@@ -132,7 +132,7 @@ const OurWork = () => {
   return (
     <>
       <div className='bg-black w-full h-auto py-5 px-4'>
-        <h2 className='text-4xl text-white font-bold text-center'>
+        <h2 className='md:text-4xl text-3xl  text-white font-droid text-center'>
           Our Gallery
         </h2>
         <div className='overflow-hidden w-full flex justify-center mt-10'>
@@ -151,9 +151,9 @@ const OurWork = () => {
             ))}
           </motion.div>
         </div>
-        <h2 className='text-center text-3xl font-semibold my-14 max-w-lg mx-auto text-white'>
+        <p className='text-center text-3xl  my-16 max-w-lg mx-auto text-white'>
           An initiative where freedom thrives through creative actions and <span className='text-[#9a1d20]'>resilience</span>
-        </h2>
+        </p>
       </div>
     </>
   );

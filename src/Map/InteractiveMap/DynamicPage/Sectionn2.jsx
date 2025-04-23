@@ -40,7 +40,7 @@ return (
       }}
       className="mt-5  md:h-auto h-[40vh] w-full"
     >
-      <div className="lg:grid grid-cols-2 flex-wrap gap-8 p-10">
+      <div className="lg:grid grid-cols-2 flex-wrap md:gap-10 p-10">
           <motion.div
           initial={{opacity:0,x:-30}}
           whileInView={{opacity:1,x: 50}}
@@ -80,7 +80,7 @@ return (
                  // Stagger animation for each word
               }}
               viewport={{ once: false, amount: 0.5 }} // Trigger animation while scrolling
-              className="font-normal md:text-xl text-base flex-wrap text-[#343434] tracking-tight inline-block text-justify"
+              className="font-normal md:text-xl  flex-wrap text-[#343434] tracking-tight inline-block text-justify"
             >
               <div className='flex flex-row gap-1'>
               {item}<span className='text-white'> </span>

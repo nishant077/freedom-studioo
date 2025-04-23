@@ -3,6 +3,7 @@ import { FaFacebook, FaWhatsapp, FaTwitter, FaInstagram } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
 import logo from '../assets/logo.PNG'
 
+
 const Footer = () => {
   return (
     <footer className="w-full bg-[#4A4A4A] text-white border-0 rounded-t-3xl">
@@ -33,7 +34,7 @@ const Footer = () => {
           
           {/* Quick links - you can add actual links here */}
           <div className="flex flex-col items-center">
-            <h3 className="text-xl font-semibold mb-6 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#9A1D20] after:mt-2 after:mx-auto">
+            <h3 className="text-xl font-droid mb-6 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#9A1D20] after:mt-2 after:mx-auto">
               Quick Links
             </h3>
             <ul className="space-y-3 text-center">
@@ -46,7 +47,7 @@ const Footer = () => {
           
           {/* Social media */}
           <div className="flex flex-col items-center md:items-end">
-            <h3 className="text-xl font-semibold mb-6 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#9A1D20] after:mt-2 after:mx-auto">
+            <h3 className="text-xl font-droid mb-6 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#9A1D20] after:mt-2 after:mx-auto">
               Follow Us
             </h3>
             <p className="text-gray-300 mb-6 text-center md:text-right">

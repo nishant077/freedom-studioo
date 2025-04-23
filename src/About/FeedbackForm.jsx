@@ -80,7 +80,7 @@ const FeedbackForm = () => {
       <div className='flex md:justify-evenly justify-center items-center flex-wrap'>
       <div className="max-w-2xl ">
         <div className="text-center mb-12">
-          <h2 className="md:text-4xl text-2xl font-bold text-white mb-3">Share Your Thoughts</h2>
+          <h2 className="md:text-4xl text-3xl font-droid text-white mb-3">Share Your Thoughts</h2>
           <p className="text-gray-300 md:text-lg text-base">We value your feedback and would love to hear from you</p>
         </div>
         
