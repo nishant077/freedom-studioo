@@ -38,7 +38,7 @@ return (
         duration: 3,
         delay: 0.2,
       }}
-      className="mt-5  md:h-auto h-[40vh] w-full"
+      className="mt-5 md:px-10 px-5 md:h-auto h-[40vh] w-full"
     >
       <div className="lg:grid grid-cols-2 flex-wrap md:gap-10 p-10">
           <motion.div
@@ -55,19 +55,19 @@ return (
              
         <img
           src={fetchImage(location.aboutImage1)}
-          className="md:h-72 md:w-72 w-32 h-32 object-cover border-4 border-white shadow-lg rounded-lg p-2"
+          className="md:h-72 md:w-72 w-36 h-36 object-cover border-4 border-white shadow-lg rounded-lg p-2"
           alt="Protest Scene"
         />
        
        
-        <img src={fetchImage(location.aboutImage2)} className="md:h-60 md:w-60 w-32 h-32 object-cover mt-20 border-4 border-white shadow-lg rounded-lg p-2"
+        <img src={fetchImage(location.aboutImage2)} className="md:h-60 md:w-60 w-36 h-36 object-cover mt-20 border-4 border-white shadow-lg rounded-lg p-2"
           alt="Protest Scene" />
         
           </div>
       
         </motion.div>
         <div>
-        <h2 className='text-[#9a1d20] md:text-2xl text-xl font-bold underline '>About</h2>
+        <h2 className='text-[#9a1d20] md:text-4xl text-2xl font-droid '>About</h2>
         <div className="mt-6 mr-10 text-justify">
           {text.split(' ').map((item, index) => (
             <motion.span

@@ -13,7 +13,7 @@ const Section3 = ({location}) => {
             className="md:h-60 h-54 md:w-60 w-72 ml-10 md:ml-28 mt-7 object-cover rounded-lg"
           />
           <div className="space-y-4">
-            <h1 className="font-bold md:text-3xl text-xl text-justify mt-20 md:tracking-tighter">
+            <h1 className="font-droid md:text-3xl text-xl text-justify mt-20 md:tracking-tighter">
             {location.issuedDetailTitle}
             </h1>
 

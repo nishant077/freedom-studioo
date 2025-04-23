@@ -78,7 +78,7 @@ const Tactics = () => {
             variants={containerVariants}
           >
             <motion.h2 
-              className="text-[#9a1d20] text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8"
+              className="text-[#9a1d20] text-2xl md:text-4xl font-droid mb-6 md:mb-8"
               variants={itemVariants}
             >
               Tactics Used:
