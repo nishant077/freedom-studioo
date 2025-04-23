@@ -116,7 +116,7 @@ const Designed = () => {
     <>
      <section className="bg-white relative mb-4" ref={ref}>
       <div className="container mx-auto px-4 pt-12">
-        <h2 className='text-center md:text-4xl text-3xl font-bold'>Client Testimonial</h2>
+        <h2 className='text-center md:text-4xl text-3xl font-droid'>Client Testimonial</h2>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={controls}

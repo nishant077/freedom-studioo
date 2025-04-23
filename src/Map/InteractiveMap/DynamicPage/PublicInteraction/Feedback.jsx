@@ -124,7 +124,7 @@
 
 
 import React, { useState } from 'react';
-import { api } from '../../../../Api/ApiType';
+import { api, oauth } from '../../../../Api/ApiType';
 import { FiSend } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
@@ -139,7 +139,7 @@ const Feedback = ({ feedbackFromBackend, movementCardId }) => {
     setIsSubmitting(true);
     
     try {
-      const url = `${api}/api/interactions/feedback?movementCardId=${movementCardId}`;
+      const url = `${oauth}/api/interactions/feedback?movementCardId=${movementCardId}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -176,7 +176,7 @@ const Feedback = ({ feedbackFromBackend, movementCardId }) => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 bg-white rounded-xl shadow-sm">
+    <div className="w-full max-w-2xl  py-5  bg-white rounded-xl shadow-sm">
       {/* Feedback Input Section */}
       <div className="relative mb-6">
         <textarea

@@ -67,7 +67,7 @@ const Homepage = () => {
             scale: textScale
           }}
         >
-          <h1 className="text-white text-4xl md:text-7xl font-bold text-center px-4 leading-tight">
+          <h1 className="text-white text-4xl md:text-7xl font-droid text-center px-4 leading-tight">
             When Creativity 
             <br></br>
             Meets change
@@ -136,7 +136,7 @@ const Homepage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className='font-semibold text-white text-center text-3xl md:text-4xl mt-10'
+            className='font-droid text-white text-center text-3xl md:text-4xl mt-10'
           >
             Interactive Map 
           </motion.h2>

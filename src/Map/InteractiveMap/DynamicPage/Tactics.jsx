@@ -51,10 +51,10 @@ const Tactics = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="w-full py-12 md:py-20 px-5 sm:px-8 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <motion.div 
-          className="flex flex-col lg:flex-row justify-between gap-8 md:gap-12"
+          className="flex flex-col lg:flex-row justify-between gap-8 md:gap-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -78,7 +78,7 @@ const Tactics = () => {
             variants={containerVariants}
           >
             <motion.h2 
-              className="text-[#9a1d20] text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8"
+              className="text-[#9a1d20] text-2xl md:text-4xl font-droid mb-6 md:mb-8"
               variants={itemVariants}
             >
               Tactics Used:

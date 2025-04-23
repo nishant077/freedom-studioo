@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('/Fonts/driodserif/DroidSerif-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

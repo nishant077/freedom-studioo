@@ -55,10 +55,10 @@ const DynamicPage = () => {
               <Marquee location={location} />
             </div>
             <Section3 location={location} />
-            <div className='flex justify-evenly mt-5'>
+            <div className='flex md:justify-around flex-wrap mt-5 md:px-14'>
             <YouTubeLink location={location} />
             <Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/>
-            <ShareButton id={id} movementCardId={location?.movementCardId}  totalShare={location?.share}/>  
+            {/* <ShareButton id={id} movementCardId={location?.movementCardId}  totalShare={location?.share}/>   */}
             </div>
           </>
         ) : (

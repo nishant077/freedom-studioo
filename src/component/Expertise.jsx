@@ -70,7 +70,7 @@ const Expertise = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className='text-center md:text-4xl text-3xl font-bold text-gray-800'
+                    className='text-center md:text-4xl text-3xl font-droid text-gray-800'
                 >
                     Our Expertise Includes:
                 </motion.h2>
@@ -98,7 +98,7 @@ const Expertise = () => {
                                 />
                             </div>
                             <div className='md:w-2/3 w-full'>
-                                <h3 className='text-2xl font-semibold text-gray-800 mb-4'>{item.title}</h3>
+                                <h3 className='text-2xl font-droid text-gray-800 mb-4'>{item.title}</h3>
                                 
                                 <div className='flex flex-wrap gap-2 mb-6'>
                                     {item.tags.map((tag, index) => (
