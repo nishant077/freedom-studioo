@@ -148,12 +148,17 @@ const Feedback = ({ feedbackFromBackend, movementCardId }) => {
         body: JSON.stringify({ feedback }),
       });
 
+        console.log(response);
+        
+
       if (response.redirected) {
         window.location.href = response.url;
         return;
       }
 
       const result = await response.json();
+      console.log("Parsed response data:", result);
+      
       setFeedbacks(prev => [
         ...prev,
         {
