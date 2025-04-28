@@ -160,12 +160,13 @@ const Feedback = ({ feedbackFromBackend, movementCardId }) => {
       console.log("Parsed response data:", result);
       
       setFeedbacks(prev => [
-        ...prev,
+     
         {
           fullName: result.fullName,
           profileImage: result.profileImage,
           feedbackText: result.feedbackText.trim(),
-        }
+        },
+        ...prev
       ]);
       setNewFeedback('');
     } catch (error) {
