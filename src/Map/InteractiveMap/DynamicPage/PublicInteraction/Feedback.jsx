@@ -210,7 +210,7 @@ const Feedback = ({ feedbackFromBackend, movementCardId }) => {
       </div>
 
       {/* Feedback List */}
-      <div className="space-y-4">
+      <div className="space-y-4 border h-56 overflow-y-auto">
         {feedbacks.length > 0 ? (
           feedbacks.map((fb, index) => (
             <motion.div 
