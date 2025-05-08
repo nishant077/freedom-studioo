@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../Navigation/Navbar'
-import logo from '../assets/logo.PNG'
 import team from '../assets/team.JPG'
 import { HiArrowUpRight } from "react-icons/hi2";
 import freedom1 from '../assets/freedom1.png'
@@ -13,13 +12,9 @@ import Footer from '../component/Footer';
 const About = () => {
   return (
     <>
-      <div className='bg-black text-white w-full'>
-        <div className='py-7 md:py-10 px-4 md:px-20'>
-        <div className='flex  justify-between'>
-          <div>
-            <img src={logo} className='w-32 h-20 md:w-60 md:h-44 object-cover absolute top-0'/>
-          </div> 
-          <div className='mt-4 md:mt-16'>
+      <div className='bg-[#4a4a4a] text-white w-full'>
+        <div className='py-7 px-4 '>
+          <div className='mt-4 md:mt-16 text-center'>
             <h2 className='text-2xl font-droid md:text-5xl'>
               About
             </h2>
@@ -27,11 +22,11 @@ const About = () => {
           <div>
             <Navbar/>
           </div>
-        </div>
+     
       </div>
-      <hr className='text-white'/>
+      <hr className='text-black'/>
       
-      <div className='w-full h-auto bg-black py-10 md:py-20 px-4 md:px-10'>
+      <div className='w-full h-auto bg-[#4a4a4a] py-10 md:py-20 px-4 md:px-10'>
         <div className='md:mt-5 mt-2'>
           <h3 className='text-3xl md:text-4xl font-droid text-center text-white'>Introduction</h3>
         </div>
@@ -48,7 +43,7 @@ const About = () => {
       
       <hr/>
       
-      <div className='w-full h-auto bg-black py-10 md:py-14 px-4 md:px-10 relative'>
+      {/* <div className='w-full h-auto bg-black py-10 md:py-14 px-4 md:px-10 relative'>
         <div className='flex flex-col md:flex-row justify-between items-center'>
           <div className='text-white font-bold mt-10 md:mt-80 flex'>
             <div>
@@ -67,8 +62,8 @@ const About = () => {
             <img src={freedom2} className='w-16 h-32 md:w-40 md:h-80 object-cover bg-black opacity-50'/>
           </div>
         </div>
-        </div>
-        <div className='bg-[#9A1D20] w-full h-10 text-white'></div>
+        </div> */}
+        {/* <div className='bg-[#9A1D20] w-full h-10 text-white'></div> */}
       <Team/>
       <Partners/>
       <FeedbackForm/>

@@ -6,6 +6,10 @@ import Service from './Services/Service';
 import Connect from './Connect/Connect';
 import DynamicPage from './Map/InteractiveMap/DynamicPage';
 import MapMain from './Map/MapMain';
+import Happening from './Map/InteractiveMap/Happening';
+import KnowledgeDesign from './Services/KnowledgeDesign';
+import StrategyDevelopment from './Services/StrategyDevelopment';
+import DigitalDevelopment from './Services/DigitalDevelopment';
 
  
 
@@ -22,6 +26,10 @@ function App() {
           <Route path="/connect" element={<Connect />} />
           <Route path="/dynamic/:id" element={<DynamicPage />} />
           <Route path="/map" element={<MapMain />} />
+          <Route path='/happening' element={<Happening/>}/>
+          <Route path='/services/knowledge-design' element={<KnowledgeDesign/>}/>
+          <Route path='/services/strategy-development' element={<StrategyDevelopment/>}/>
+          <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/>
         </Routes>
       </div>
     </Router>

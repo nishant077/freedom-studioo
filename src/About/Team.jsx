@@ -65,9 +65,9 @@ const Team = () => {
     }, [isInView, controls]);
 
     return (
-        <div className='w-full h-auto bg-black md:py-20 py-10 md:px-10 px-4 overflow-hidden'>
+        <div className='w-full h-auto bg-white md:py-20 py-10 md:px-10 px-4 overflow-hidden'>
             <div className='md:mt-5 mt-2'>
-                <h2 className='md:text-4xl text-3xl font-droid text-center text-white'>Our Team</h2>
+                <h2 className='md:text-4xl text-3xl font-droid text-center text-black'>Our Team</h2>
             </div>
             
             <div 
@@ -91,7 +91,7 @@ const Team = () => {
                                     className='md:w-60 md:h-52 w-44 h-36 rounded-lg object-cover'
                                 />
                             </div>
-                            <div className='text-white mt-4 text-center'>
+                            <div className='text-black mt-4 text-center'>
                                 <h4 className='md:text-base text-sm font-normal'>{member.name}</h4>
                                 <p className='md:text-sm text-xs font-thin opacity-80'>{member.role}</p>
                             </div>

@@ -15,8 +15,8 @@ const OurWork = () => {
 
   return (
     <div className='bg-black w-full h-auto py-10 px-4 md:px-10'>
-      <h2 className='md:text-4xl text-3xl text-white font-bold text-center mb-16'>
-        Our Gallery
+      <h2 className='md:text-4xl text-3xl text-white font-droid text-center mb-16'>
+       Gallery
       </h2>
       
       {/* Gallery Container */}
