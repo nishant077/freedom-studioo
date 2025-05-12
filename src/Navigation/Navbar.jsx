@@ -581,7 +581,7 @@ const Navbar = () => {
                       onHoverStart={() => setHoveredItem('project')}
                       onHoverEnd={() => setHoveredItem(null)}
                     >
-                      <Link to="/map" onClick={toggleMenu} className="group flex items-center justify-between">
+                      <Link to="/project" onClick={toggleMenu} className="group flex items-center justify-between">
                         <p className="text-3xl text-white md:text-5xl font-droid hover:text-gray-400 transition-colors duration-300">
                           Project
                         </p>

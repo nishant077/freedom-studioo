@@ -6,7 +6,8 @@ import logo from '../assets/logo.PNG'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#9a1d20] text-white border-0 rounded-t-3xl">
+    
+    <footer className="w-full bg-black text-white border-0 rounded-t-3xl">
       {/* Top accent bar */}
     
       

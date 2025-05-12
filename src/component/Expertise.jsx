@@ -1,46 +1,10 @@
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import React from 'react';
 import image1 from '../assets/workimg1.jpg';
 import image2 from '../assets/workimg2.jpg';
 import image3 from '../assets/workimg3.jpg';
 
 const Expertise = () => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-        threshold: 0.1,
-        triggerOnce: false
-    });
-
-    useEffect(() => {
-        if (inView) {
-            controls.start('visible');
-        } else {
-            controls.start('hidden');
-        }
-    }, [controls, inView]);
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.3
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
-            }
-        }
-    };
+ 
 
     const data = [
         {
@@ -66,32 +30,26 @@ const Expertise = () => {
     return (
         <div className="relative bg-white w-full overflow-hidden">
             <div className='py-10 md:py-16 px-4'>
-                <motion.h2 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                <h2 
                     className='text-center md:text-4xl text-3xl font-droid text-gray-800'
                 >
                     Our Expertise Includes:
-                </motion.h2>
+                </h2>
             </div>
             
-            <motion.div 
-                ref={ref}
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
+            <div 
+              
                 className='md:px-16 lg:px-28 px-4 md:py-10 pb-16'
             >
                 {data.map((item, key) => (
                     <React.Fragment key={key}>
-                        <motion.div 
-                            variants={itemVariants}
+                        <div 
+                          
                             className={`flex flex-col ${key % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} justify-between items-center mt-5 w-full gap-8 md:gap-16 mb-16`}
                         >
                             <div className='md:w-1/3 w-full'>
-                                <motion.img 
-                                    whileHover={{ scale: 1.03 }}
+                                <img 
+                                   
                                     src={item.image} 
                                     className='w-full h-64 md:h-80 object-cover rounded-lg shadow-lg'
                                     alt={item.title}
@@ -113,19 +71,19 @@ const Expertise = () => {
                                 
                                 <p className='text-lg text-gray-600 leading-relaxed'>{item.description}</p>
                             </div>
-                        </motion.div>
+                        </div>
                         
                         {key < data.length - 1 && (
-                            <motion.div 
-                                variants={itemVariants}
+                            <div 
+                               
                                 className="flex justify-center mb-16"
                             >
                                 <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-                            </motion.div>
+                            </div>
                         )}
                     </React.Fragment>
                 ))}
-            </motion.div>
+            </div>
         </div>
     );
 };

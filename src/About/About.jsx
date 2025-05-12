@@ -8,6 +8,7 @@ import Team from './Team';
 import Partners from './Partners';
 import FeedbackForm from './FeedbackForm';
 import Footer from '../component/Footer';
+import AboutGallery from './AboutGallery';
 
 const About = () => {
   return (
@@ -41,7 +42,6 @@ const About = () => {
         </p>
       </div>
       
-      <hr/>
       
       {/* <div className='w-full h-auto bg-black py-10 md:py-14 px-4 md:px-10 relative'>
         <div className='flex flex-col md:flex-row justify-between items-center'>
@@ -64,11 +64,13 @@ const About = () => {
         </div>
         </div> */}
         {/* <div className='bg-[#9A1D20] w-full h-10 text-white'></div> */}
+      
+      </div>
+      <AboutGallery/>
       <Team/>
       <Partners/>
       <FeedbackForm/>
       <Footer/>
-      </div>
       
      
     </>

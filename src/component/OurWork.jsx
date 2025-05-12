@@ -14,6 +14,7 @@ const OurWork = () => {
   const containerRef = useRef(null);
 
   return (
+    <>
     <div className='bg-black w-full h-auto py-10 px-4 md:px-10'>
       <h2 className='md:text-4xl text-3xl text-white font-droid text-center mb-16'>
        Gallery
@@ -60,6 +61,9 @@ const OurWork = () => {
         An initiative where freedom thrives through creative actions and <span className='text-[#9a1d20] font-semibold'>resilience</span>
       </p>
     </div>
+    <div className='bg-[#9a1d20] w-full h-10'>
+    </div>
+    </>
   );
 };
 

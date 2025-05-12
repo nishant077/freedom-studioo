@@ -10,6 +10,7 @@ import Happening from './Map/InteractiveMap/Happening';
 import KnowledgeDesign from './Services/KnowledgeDesign';
 import StrategyDevelopment from './Services/StrategyDevelopment';
 import DigitalDevelopment from './Services/DigitalDevelopment';
+import Project from './Project/Project';
 
  
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/services/knowledge-design' element={<KnowledgeDesign/>}/>
           <Route path='/services/strategy-development' element={<StrategyDevelopment/>}/>
           <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/>
+          <Route path='/project' element={<Project/>}/>
         </Routes>
       </div>
     </Router>

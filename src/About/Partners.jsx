@@ -16,7 +16,7 @@ const Partners = () => {
 
   return (
     <>
-     <div className='bg-white w-full h-auto md:py-20 py-10 md:px-10 px-4'>
+     <div className='bg-white w-full h-auto md:py-20 py-5 md:px-10 px-4'>
        <div className='mt-5'>
        <h2 className='md:text-4xl font-droid text-3xl text-center text-black'>Our Partners</h2>
        </div>
