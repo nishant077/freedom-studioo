@@ -65,7 +65,7 @@ const Team = () => {
     }, [isInView, controls]);
 
     return (
-        <div className='w-full h-auto bg-white md:py-20 py-5 md:px-10 px-4 overflow-hidden'>
+        <div className='w-full h-auto bg-white md:py-10 py-5 md:px-10 px-4 overflow-hidden'>
             <div className='md:mt-5 mt-2'>
                 <h2 className='md:text-4xl text-3xl font-droid text-center text-black'>Our Team</h2>
             </div>

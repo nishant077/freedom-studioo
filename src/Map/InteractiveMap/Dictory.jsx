@@ -11,15 +11,15 @@ const Dictory = () => {
   const data = [
     {
       image: women1,
-      title: 'What is Happening?',
-      description: 'Explore all our upcoming events from October to December. Join us for exciting gatherings and networking opportunities.',
-      path: '/happening' // Add path for each card
+      title: 'WHAT IS HAPPENING?',
+      description: 'What’s Happening? is a storytelling series that unpacks the who, what, why, when, and how of major movements. It explores the context, key actors, motivations, and demands behind each struggle, revealing the ecosystem of collective action so our audience can better understand the complexity of movements.',
+      path: '/happening' 
     },
     {
       image: women2,
-      title: 'Video Gallery',
-      description: 'Watch our collection of videos showcasing past events, interviews, and highlights from our community.',
-      path: '/videos' // Add path for each card
+      title: 'VOICES OF FRONTLINERS',
+      description: 'This is where we bring movements to life through video, capturing powerful moments, voices from the frontlines, and stories that challenge, inspire, and mobilize. Each video offers a window into the ongoing struggles and victories of communities pushing for justice.',
+      path: '/videos'
     }
   ];
 
@@ -31,8 +31,8 @@ const Dictory = () => {
     <div className='bg-gradient-to-b from-gray-800 to-gray-900 py-16 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='mt-5 mb-12 font-droid text-4xl md:text-5xl text-white text-center font-bold tracking-tight'>
-          <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500'>
-            Directory
+          <span className='bg-clip-text text-transparent text-white'>
+          DIRECTORY
           </span>
         </h2>
         
