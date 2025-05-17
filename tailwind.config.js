@@ -1,3 +1,5 @@
+import { hover } from 'motion';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,7 +10,16 @@ export default {
     extend: {
       fontFamily:{
         droid:['"Droid Serif"','serif']
-      }
+      },
+      rotate: {
+        'y-180': '180deg',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      transformStyle: ['responsive','hover'],
+      backfaceVisibility: ['responsive','hover'],
     },
   },
   plugins: [],

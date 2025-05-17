@@ -9,6 +9,7 @@ import Homepagevideo from '../assets/EveryChild.mp4'
 import HomePageMap from './HomePageMap';
 import KeyImpact from './KeyImpact';
 import Expertise from './Expertise';
+import FeedbackForm from '../About/FeedbackForm';
 
 const Homepage = () => {
   const headline = "Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
@@ -137,6 +138,7 @@ const Homepage = () => {
         <KeyImpact/>
         <Designed />
         <OurWork/>
+        <FeedbackForm/>
         <Footer/>
       </div>
     </>

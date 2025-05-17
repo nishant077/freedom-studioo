@@ -2,6 +2,11 @@ import React from 'react';
 import image1 from '../assets/workimg1.jpg';
 import image2 from '../assets/workimg2.jpg';
 import image3 from '../assets/workimg3.jpg';
+import bulb from '../assets/bulb.png';
+import world from '../assets/Countries.png'
+import drop from '../assets/4.png'
+import './Flip.css'
+
 
 const Expertise = () => {
  
@@ -26,6 +31,26 @@ const Expertise = () => {
             tags: ['Data Visualization', 'Market Research', 'Analytics', 'Impact Measurement']
         }
     ];
+
+    const data2=[
+        {
+           icon : bulb,
+           front: 'Insight',
+           back:'We decode data, lived realities, and emerging needs to generate actionable intelligence.'
+    },
+
+    {
+        icon : world,
+        front: 'Culture',
+        back:'We listen deeply to social shifts, behaviors, and values to help organizations align with the world people are building.'
+ },
+ 
+ {
+    icon : drop,
+    front: 'Empathy',
+    back:'We center human experience to co- create solutions that heal, engage, and drive equity.'
+},
+]
 
     return (
         <div className="relative bg-white w-full overflow-hidden">
@@ -83,7 +108,73 @@ const Expertise = () => {
                         )}
                     </React.Fragment>
                 ))}
+
+<div className="flex justify-center items-center p-4">
+  <div className="bg-[#9a1d20] w-full md:w-3/4 h-auto border-0 rounded-lg p-4">
+    <p className="p-4 md:p-5 text-white text-lg font-semibold text-center">
+      We help ethical brands and social organizations
+      show up more clearly, more creatively and more consciously.
+      For more people. In more places. With more purpose.
+    </p>
+    <div className="mt-2 flex flex-col sm:flex-row justify-between items-center p-4 text-white text-xl gap-2 sm:gap-0">
+      <span className="font-droid border-0 rounded-lg bg-black p-3 w-full sm:w-auto text-center">STORY</span>
+      
+      {/* Desktop-only dotted divider */}
+      <div className="hidden sm:block flex-1 mx-2 border-t-2 border-dotted border-white opacity-50"></div>
+      
+      <span className="font-droid border-0 rounded-lg bg-black p-3 w-full sm:w-auto text-center">STRATEGY</span>
+      
+      {/* Desktop-only dotted divider */}
+      <div className="hidden sm:block flex-1 mx-2 border-t-2 border-dotted border-white opacity-50"></div>
+      
+      <span className="font-droid border-0 rounded-lg bg-black p-3 w-full sm:w-auto text-center">SYSTEMS</span>
+    </div>
+  </div>
+</div>
+     
+     <h3 className='font-droid text-xl text-center md:mt-3 mt-1'>The Freedom Formula:</h3>
+      <p className='text-center text-xl font-medium opacity-85'>Our signature approach blends three core forces</p>
+
+       {/* <div className='md:flex md:justify-around mt-5 flex-wrap flex justify-center items-center space-y-4 cursor-pointer md:mb-4'>
+           {
+            data2.map((item,key)=>(
+                <div className='border-0 bg-black rounded-md flex justify-between w-56'>
+                    <div className='bg-[#9a1d20] '>
+                    <img src={item.icon} className='w-20 h-20 object-cover'/>
+                    </div>
+                    <div className='px-10 text-lg text-white font-droid flex justify-center items-center'>
+                    <h3>{item.front}</h3>
+                    </div>
+                </div>
+            )
+           )}
+       </div> */}
+
+<div className='flip-card-container md:flex md:justify-around mt-5 flex-wrap flex justify-center items-center gap-4 cursor-pointer md:mb-4'>
+      {data2.map((item, key) => (
+        <div key={key} className="flip-card w-56 h-20">
+          <div className="flip-card-inner">
+            {/* Front Side */}
+            <div className='flip-card-front bg-black rounded-md flex overflow-hidden'>
+              <div className='bg-[#9a1d20] flex items-center justify-center w-20'>
+                <img src={item.icon} className='w-20 h-20 object-contain' alt={item.front}/>
+              </div>
+              <div className='px-4 text-lg text-white font-droid flex items-center justify-center flex-1'>
+                <h3>{item.front}</h3>
+              </div>
             </div>
+
+            {/* Back Side */}
+            <div className='flip-card-back bg-[#9a1d20] rounded-md flex items-center justify-center p-4'>
+              <p className='text-white text-xs text-center'>{item.back}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+         
+            </div>
+         
         </div>
     );
 };

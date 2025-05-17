@@ -1,9 +1,7 @@
 import React from 'react'
 import Navbar from '../Navigation/Navbar'
 import team from '../assets/team.JPG'
-import { HiArrowUpRight } from "react-icons/hi2";
-import freedom1 from '../assets/freedom1.png'
-import freedom2 from '../assets/freedom2.jpg'
+import { IoArrowDownOutline  } from "react-icons/io5";
 import Team from './Team';
 import Partners from './Partners';
 import FeedbackForm from './FeedbackForm';
@@ -13,7 +11,7 @@ import AboutGallery from './AboutGallery';
 const About = () => {
   return (
     <>
-      <div className='bg-[#4a4a4a] text-white w-full'>
+      {/* <div className='bg-[#4a4a4a] text-white w-full h-screen'>
         <div className='py-7 px-4 '>
           <div className='mt-4 md:mt-16 text-center'>
             <h2 className='text-2xl font-droid md:text-5xl'>
@@ -65,6 +63,36 @@ const About = () => {
         </div> */}
         {/* <div className='bg-[#9A1D20] w-full h-10 text-white'></div> */}
       
+      {/* </div> */} 
+      <div className='bg-black h-screen overflow-y-hidden'>
+        <Navbar/>
+        <div className='flex justify-center items-center pt-28 ml-10'>
+          <img src={team} className='w-[900px] h-[500px] object-cover box-border rounded-[2vw] relative'/>
+          <div className='absolute left-28'>
+            <h1 className='font-droid text-7xl text-white'>AB<span className='text-[#9a1d20] font-droid'>O</span>UT</h1>
+            <p className='text-xs text-white absolute w-40  mt-5 opacity-60'>
+            ​At Freedom Studio, we believe in the transformative power of creativity to challenge injustices, amplify marginalized voices, and drive meaningful social change. Our initiative is built on the foundation that freedom thrives through creative actions and fostering resilience. 
+            </p>
+          </div>
+        </div>
+        <div className='flex justify-around text-white mt-5 text-xs opacity-60'>
+          <div className='space-y-1'>
+           <p className='text-sm font-droid'> We operate through two entities:</p>
+           <ul className='space-y-1'>
+            <li>Freedom Studio International</li>
+            <li>Freedom Studio Nepal</li>
+           </ul>
+          </div>
+          <div>
+            <p className='w-56'>Freedom Studio International: A creative enterprise that provides digital solutions for social organizations and movements worldwide, specializing in strategic planning, campaign design, multimedia production, data visualization, and IT innovation.</p>
+          </div>
+          <div>
+              <p className='w-56'>Freedom Studio Nepal: A grassroots movement that strengthens marginalized communities through nonviolent resistance, leadership development, artivism, and digital mobilization. ​</p> 
+          </div>
+          <div className="flex items-center justify-center w-10 h-10 rounded-full border-white border-2 cursor-pointer">
+            <IoArrowDownOutline color="white" size={24} />
+          </div>
+        </div>
       </div>
       <AboutGallery/>
       <Team/>

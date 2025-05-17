@@ -61,8 +61,6 @@ const OurWork = () => {
         An initiative where freedom thrives through creative actions and <span className='text-[#9a1d20] font-semibold'>resilience</span>
       </p>
     </div>
-    <div className='bg-[#9a1d20] w-full h-10'>
-    </div>
     </>
   );
 };
