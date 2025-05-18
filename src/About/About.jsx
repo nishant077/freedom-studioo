@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navigation/Navbar'
-import team from '../assets/team.JPG'
+import team from '../assets/Gallery13.jpeg'
 import { IoArrowDownOutline  } from "react-icons/io5";
 import Team from './Team';
 import Partners from './Partners';

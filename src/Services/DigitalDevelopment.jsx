@@ -1,12 +1,13 @@
 import React from 'react'
-import knowledgedesign from '../assets/knowledgedesign.jpeg'
+import knowledgedesign from '../assets/Digital Communication.jpeg'
 import Navbar from '../Navigation/Navbar'
-import working2 from '../assets/workimg2.jpg'
-import working1 from '../assets/workimg1.jpg';
-import working3 from '../assets/workimg3.jpg';
-import working4 from '../assets/workimg4.jpg';
-import working5 from '../assets/workimg5.jpg';
-import working6 from '../assets/workimg6.jpg';
+import working2 from '../assets/Gallery7.jpeg'
+import working1 from '../assets/Gallery24.jpeg';
+import working3 from '../assets/Gallery14.jpeg';
+import working4 from '../assets/Creative.jpeg';
+import working5 from '../assets/Gallery17.jpeg';
+import working6 from '../assets/Event.jpeg';
+import Footer from '../component/Footer';
 
 const DigitalDevelopment = () => {
 
@@ -39,7 +40,7 @@ const DigitalDevelopment = () => {
   return (
     <>
       <div className='relative h-screen w-full overflow-hidden bg-black opacity-95'>
-        {/* Image with overlay */}
+      
         <div className='absolute inset-0 z-0'>
           <img 
             src={knowledgedesign} 
@@ -48,7 +49,7 @@ const DigitalDevelopment = () => {
           />
         </div>
         
-        {/* Content */}
+      
         <div className='relative z-10 flex flex-col justify-center h-full px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center md:text-left md:ml-20 lg:ml-32'>
             <h3 className='font-droid text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>
@@ -59,7 +60,7 @@ const DigitalDevelopment = () => {
 so you don’t just post, you participate.
             </p>
             
-            {/* CTA Button */}
+         
           </div>
         </div>
       </div>
@@ -91,33 +92,26 @@ our clients are expressed clearly and creatively.
             </div>
         </div>
     </div>
-    {/* <div className='bg-black w-full h-auto md:py-10 md:px-10 py-5 px-5'>
-             <h3 className='text-2xl md:text-5xl'>WHAT WE OFFER</h3>
-             <div className='mt-5'>
-                 
-             </div>
-    </div> */}
+  
     <div className='bg-[#4a4a4a] w-full mb-2 h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
   <div className='max-w-7xl mx-auto'>
-    {/* Section Header */}
+  
     <div className='text-center mb-16'>
       <h2 className='mt-5 mb-6 font-droid text-4xl text-white md:text-5xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>
-      <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-        Discover our comprehensive services designed to transform your business
-      </p>
+    
     </div>
 
-    {/* Cards Grid */}
+
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {offer.map((item, key) => (
         <div 
           key={key}
           className='group relative bg-white rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full'
         >
-          {/* Image Container with Hover Effect */}
+         
           <div className='overflow-hidden'>
             <img 
               src={item.image} 
@@ -126,7 +120,7 @@ our clients are expressed clearly and creatively.
             />
           </div>
           
-          {/* Content Container */}
+     
           <div className='p-6 flex flex-col flex-1'>
             <h3 className='font-droid text-xl font-bold text-black mb-3 group-hover:text-[#9a1d20] transition-colors duration-300'>
               {item.title}
@@ -134,13 +128,14 @@ our clients are expressed clearly and creatively.
             
           </div>
           
-          {/* Hover Border Effect */}
+       
           <div className='absolute inset-0 border-2 border-transparent group-hover:border-[#9a1d20] rounded-xl pointer-events-none transition-all duration-500'></div>
         </div>
       ))}
     </div>
   </div>
 </div>
+<Footer/>
     </>
   )
 }

@@ -3,9 +3,11 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import team1 from '../assets/team1.jpg';
 import team2 from '../assets/team2.jpg'; 
 import team3 from '../assets/team3.jpg';
-import team4 from '../assets/team4.jpg';
-import team5 from '../assets/team5.jpg';
+import team4 from '../assets/Aayush.jpeg';
+import team5 from '../assets/Binaya Rimal.jpeg';
 import team6 from '../assets/team6.jpg';
+import team7 from '../assets/Ajit Kumar Bashyal.jpeg';
+import team8 from '../assets/Rishita Khatri.jpeg';
 
 const Team = () => {
     const team = [
@@ -39,6 +41,18 @@ const Team = () => {
             role: 'Member',
             image: team6
         },
+        
+            {
+                name: 'Ajit Kumar Bashyal',
+                role: 'Member',
+                image: team7
+            },
+            {
+                name: 'Rishita Khatri',
+                role: 'Member',
+                image: team8
+            },
+        
     ];
 
     // Duplicate the team array to create seamless looping
@@ -92,7 +106,7 @@ const Team = () => {
                                 />
                             </div>
                             <div className='text-black mt-4 text-center'>
-                                <h4 className='md:text-base text-sm font-normal'>{member.name}</h4>
+                                <h4 className='md:text-base text-sm font-droid'>{member.name}</h4>
                                 <p className='md:text-sm text-xs font-thin opacity-80'>{member.role}</p>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ import './Font.css';
 import Footer from './Footer';
 import OurWork from './OurWork';
 import Navbar from '../Navigation/Navbar';
-import Homepagevideo from '../assets/EveryChild.mp4'
+import Homepagevideo from '../assets/Hero Page video.mp4'
 import HomePageMap from './HomePageMap';
 import KeyImpact from './KeyImpact';
 import Expertise from './Expertise';

@@ -1,8 +1,14 @@
 import React from 'react';
 import Navbar from '../Navigation/Navbar';
-import projectheading from '../assets/project.jpg';
+import projectheading from '../assets/Institution.jpeg';
 import { IoArrowDownOutline  } from "react-icons/io5";
-import working2 from '../assets/workimg2.jpg';
+import Annupam from '../assets/Gallery6.jpeg';
+import Artivism from '../assets/Artivism Fellowship.jpg';
+import Artivism1 from '../assets/Gallery20.jpeg';
+import HumanRights from '../assets/HumanRights.jpeg';
+import Problem from '../assets/problem with Partnership.jpg';
+import TooSouthern from '../assets/TooSoutherntobefunded.png';
+import Information from '../assets/Gallery15.jpeg';
 import Footer from '../component/Footer';
 
 
@@ -83,7 +89,7 @@ const Project = () => {
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>01</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={Annupam} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
@@ -121,7 +127,7 @@ concepts of artivism, guiding hands-on creation, and leading critical reflection
             </div>
             <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={Artivism1} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
@@ -134,7 +140,7 @@ concepts of artivism, guiding hands-on creation, and leading critical reflection
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>03</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={Artivism} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
@@ -161,12 +167,12 @@ activism.
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>04</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={Information} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
             <div>
-            <h3 className='font-droid text-2xl mt-10'>INFORMATION MANIPULATION</h3>
+            <h3 className='font-droid text-2xl mt-10'>INFORMATION MANIPULATION</h3> 
               <p className='text-sm text-justify w-96 mt-2'>
               This campaign tackled the urgent issue of digital mis/disinformation by engaging youth artists
 and influencers to produce creative content that challenges harmful narratives. Freedom
@@ -184,7 +190,7 @@ outreach and physical screening including an open exhibition.
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>05</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={HumanRights} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
@@ -210,7 +216,7 @@ highlights art’s power to inform, inspire, and activate.
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>06</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={Problem} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
@@ -238,7 +244,7 @@ global peacebuilding space.
        <h2 className='font-droid text-[10vw] tracking-normal uppercase text-neutral-200 leading-none flex justify-center items-center'>07</h2>
        <div className='w-[45%]'>
               <img
-                src={working2} 
+                src={TooSouthern} 
                 className='w-full h-auto max-h-[500px] object-cover rounded-[2vw] relative'
               />
             </div>
