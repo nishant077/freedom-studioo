@@ -46,93 +46,141 @@ const Happening = () => {
     {
       id: 1,
       title: "The Teacher's Protest in Kathmandu",
-      images: [kathmandu, kathmandu2, kathmandu3, kathmandu4, kathmandu5, kathmandu6],
+      images: [
+        { id: 'k1', src: kathmandu },
+        { id: 'k2', src: kathmandu2 },
+        { id: 'k3', src: kathmandu3 },
+        { id: 'k4', src: kathmandu4 },
+        { id: 'k5', src: kathmandu5 },
+        { id: 'k6', src: kathmandu6 }
+      ],
       category: "Kathmandu",
       date: "May 15, 2023"
     },
     {
       id: 2,
       title: "Unrest in Kathmandu (Tinkune)",
-      images: [tinkune1, tinkune2, tinkune3, tinkune4, tinkune5, tinkune6],
+      images: [
+        { id: 't1', src: tinkune1 },
+        { id: 't2', src: tinkune2 },
+        { id: 't3', src: tinkune3 },
+        { id: 't4', src: tinkune4 },
+        { id: 't5', src: tinkune5 },
+        { id: 't6', src: tinkune6 }
+      ],
       category: "Tinkune",
       date: "June 2, 2023"
     },
     {
       id: 3,
       title: "What is Happening in Sudan?",
-      images: [sudan1, sudan2, sudan3, sudan4, sudan5, sudan6, sudan7, sudan8],
+      images: [
+        { id: 's1', src: sudan1 },
+        { id: 's2', src: sudan2 },
+        { id: 's3', src: sudan3 },
+        { id: 's4', src: sudan4 },
+        { id: 's5', src: sudan5 },
+        { id: 's6', src: sudan6 },
+        { id: 's7', src: sudan7 },
+        { id: 's8', src: sudan8 }
+      ],
       category: "Sudan",
       date: "April 28, 2023"
     },
     {
       id: 4,
       title: "Land Rights Protest - Dang",
-      images: [dang1, dang2, dang3, dang4, dang5, dang6],
+      images: [
+        { id: 'd1', src: dang1 },
+        { id: 'd2', src: dang2 },
+        { id: 'd3', src: dang3 },
+        { id: 'd4', src: dang4 },
+        { id: 'd5', src: dang5 },
+        { id: 'd6', src: dang6 }
+      ],
       category: "Dang",
       date: "May 5, 2023"
     },
     {
       id: 5,
       title: "Crisis in Afghanistan",
-      images: [afghanistan1, afghanistan2, afghanistan3, afghanistan4, afghanistan5, afghanistan6],
+      images: [
+        { id: 'a1', src: afghanistan1 },
+        { id: 'a2', src: afghanistan2 },
+        { id: 'a3', src: afghanistan3 },
+        { id: 'a4', src: afghanistan4 },
+        { id: 'a5', src: afghanistan5 },
+        { id: 'a6', src: afghanistan6 }
+      ],
       category: "Afghanistan",
       date: "March 20, 2023"
     },
     {
       id: 6,
       title: "The Kolkata Incident",
-      images: [team16, team17, team2, team3],
+      images: [
+        { id: 'k1', src: team16 },
+        { id: 'k2', src: team17 },
+        { id: 'k3', src: team2 },
+        { id: 'k4', src: team3 }
+      ],
       category: "Kolkata",
       date: "February 10, 2023"
     },
     {
       id: 7,
       title: "Land Rights Protest - Bhaktapur",
-      images: [team2, team3, team5, team6],
+      images: [
+        { id: 'b1', src: team2 },
+        { id: 'b2', src: team3 },
+        { id: 'b3', src: team5 },
+        { id: 'b4', src: team6 }
+      ],
       category: "Bhaktapur",
       date: "May 1, 2023"
     },
   ];
 
-  const [cardStates, setCardStates] = useState({});
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [hoveredCard, setHoveredCard] = useState(null);
-
-  useEffect(() => {
-    const initialStates = {};
-    cardData.forEach(item => {
-      const randomIndex = Math.floor(Math.random() * item.images.length);
-      initialStates[item.id] = {
-        currentIndex: randomIndex,
+  // Initialize state for each card's current image index and play status
+  const [cardStates, setCardStates] = useState(() => {
+    const initialState = {};
+    cardData.forEach(card => {
+      initialState[card.id] = {
+        currentIndex: 0,
         isPlaying: true
       };
     });
-    setCardStates(initialStates);
-  }, []);
+    return initialState;
+  });
 
+  const [isGlobalPlaying, setIsGlobalPlaying] = useState(true);
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  // Effect to handle auto-rotation of all carousels
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isGlobalPlaying) return;
 
-    const cardInterval = setInterval(() => {
+    const interval = setInterval(() => {
       setCardStates(prevStates => {
-        const newStates = {...prevStates};
-        Object.keys(newStates).forEach(id => {
-          if (newStates[id].isPlaying) {
-            const item = cardData.find(item => item.id === parseInt(id));
-            if (item) {
-              newStates[id].currentIndex = 
-                (newStates[id].currentIndex + 1) % item.images.length;
-            }
+        const newStates = { ...prevStates };
+        
+        cardData.forEach(card => {
+          if (newStates[card.id]?.isPlaying) {
+            newStates[card.id] = {
+              ...newStates[card.id],
+              currentIndex: (newStates[card.id].currentIndex + 1) % card.images.length
+            };
           }
         });
+
         return newStates;
       });
     }, 3000);
 
-    return () => clearInterval(cardInterval);
-  }, [isPlaying]);
+    return () => clearInterval(interval);
+  }, [isGlobalPlaying]);
 
-  const togglePlayPause = (cardId) => {
+  const toggleCardPlayPause = (cardId) => {
     setCardStates(prev => ({
       ...prev,
       [cardId]: {
@@ -154,7 +202,7 @@ const Happening = () => {
   };
 
   const toggleGlobalPlayPause = () => {
-    setIsPlaying(!isPlaying);
+    setIsGlobalPlaying(!isGlobalPlaying);
   };
 
   return (
@@ -183,7 +231,7 @@ const Happening = () => {
             onClick={toggleGlobalPlayPause}
             className="px-4 sm:px-6 py-2 sm:py-3 bg-[#9a1d20] hover:bg-[#8a1a1d] text-white rounded-full flex items-center gap-2 transition-colors duration-300"
           >
-            {isPlaying ? (
+            {isGlobalPlaying ? (
               <>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -215,13 +263,13 @@ const Happening = () => {
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+              <div className="relative h-56 sm:h-64 md:h-96 overflow-hidden">
                 {/* Card Image Carousel */}
                 <div className="relative h-full w-full">
                   {item.images.map((image, imgIndex) => (
                     <motion.img
-                      key={imgIndex}
-                      src={image}
+                      key={image.id}
+                      src={image.src}
                       alt={item.title}
                       className="absolute inset-0 w-full h-full object-cover"
                       initial={{ opacity: 0 }}
@@ -236,7 +284,7 @@ const Happening = () => {
                 
                 {/* Play/Pause Button */}
                 <button
-                  onClick={() => togglePlayPause(item.id)}
+                  onClick={() => toggleCardPlayPause(item.id)}
                   className={`absolute top-2 right-2 bg-black/70 text-white p-1.5 sm:p-2 rounded-full hover:bg-black transition-all duration-300 ${
                     hoveredCard === item.id ? 'opacity-100' : 'opacity-70'
                   }`}
@@ -272,7 +320,7 @@ const Happening = () => {
                 <div className="mt-3 sm:mt-4 flex overflow-x-auto pb-1 sm:pb-2 gap-1 sm:gap-2 scrollbar-hide">
                   {item.images.map((image, imgIndex) => (
                     <button
-                      key={imgIndex}
+                      key={image.id}
                       onClick={() => goToImage(item.id, imgIndex)}
                       className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-md overflow-hidden border-2 transition-all duration-300 ${
                         cardStates[item.id]?.currentIndex === imgIndex
@@ -281,7 +329,7 @@ const Happening = () => {
                       }`}
                     >
                       <img 
-                        src={image} 
+                        src={image.src} 
                         alt={`Thumbnail ${imgIndex + 1}`}
                         className="w-full h-full object-cover"
                       />
@@ -295,7 +343,6 @@ const Happening = () => {
       </div>
       <Footer/>
     </div>
-    
   );
 };
 

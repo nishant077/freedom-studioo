@@ -28,7 +28,7 @@ const Dictory = () => {
   };
 
   return (
-    <div className='bg-gradient-to-b from-gray-800 to-gray-900 py-16 px-4 sm:px-6 lg:px-8'>
+    <div className='bg-[#4a4a4a] py-16 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='mt-5 mb-12 font-droid text-4xl md:text-5xl text-white text-center font-bold tracking-tight'>
           <span className='bg-clip-text text-transparent text-white'>
