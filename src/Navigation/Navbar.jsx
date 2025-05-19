@@ -5,6 +5,7 @@ import logo from '../assets/logo.PNG';
 import { IoClose } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { useScroll } from '../ContextHook/ScrollProvider';
 
 
 const Navbar = () => {
@@ -376,7 +377,7 @@ const Navbar = () => {
                     >
                       <Link to="/learning-corner" onClick={toggleMenu} className="group flex items-center justify-between">
                         <p className="text-2xl text-white md:text-4xl font-droid hover:text-gray-400 transition-colors duration-300">
-                          Learning Corner
+                        Movement Media
                         </p>
                         <AnimatePresence>
                           {hoveredItem === 'learning' && (

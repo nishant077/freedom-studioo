@@ -14,7 +14,6 @@ import Project from './Project/Project';
 import LearningCorner from './LearningCorner/LearningCorner';
 
  
-
 function App() {
   return (
     <Router>
@@ -39,5 +38,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

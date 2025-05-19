@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaCheckCircle } from 'react-icons/fa';
-import tatics from '../../../assets/tatics.webp'
+import tatics from '../../../assets/tatics1.jpeg'
 
-const Tactics = () => {
+const Tactics = ({tacticsList}) => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,14 +41,14 @@ const Tactics = () => {
   };
 
   // List items data
-  const tacticsList = [
-    "Encirclement outside the municipality office with agricultural tools",
-    "Collecting handprints of the individuals and families affected by the issue.",
-    "Live art session regarding the issues by victims and artists in the theme of the issue",
-    "Social media mobilization",
-    "Formation of strugglers committee as an institution",
-    "Showcasing and exhibiting their issues during festivals and events."
-  ];
+  // const tacticsList = [
+  //   "Encirclement outside the municipality office with agricultural tools",
+  //   "Collecting handprints of the individuals and families affected by the issue.",
+  //   "Live art session regarding the issues by victims and artists in the theme of the issue",
+  //   "Social media mobilization",
+  //   "Formation of strugglers committee as an institution",
+  //   "Showcasing and exhibiting their issues during festivals and events."
+  // ];
 
   return (
     <section className="w-full py-12 md:py-20 px-5 sm:px-8 lg:px-8 bg-gray-50">

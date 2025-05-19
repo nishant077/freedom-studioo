@@ -10,6 +10,7 @@ import learning from '../assets/gallery1.jpeg'
 import Navbar from '../Navigation/Navbar'
 import gallery from '../assets/Gallery4.jpeg'
 import { motion } from 'framer-motion';
+import LearningCornerMap from './LearningCornerMap'
 
 
 const LearningCorner = () => {
@@ -23,6 +24,10 @@ const LearningCorner = () => {
       </div>
       
       <Navbar/>
+
+
+
+      <LearningCornerMap/>
       
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mt-10 md:mt-20'>

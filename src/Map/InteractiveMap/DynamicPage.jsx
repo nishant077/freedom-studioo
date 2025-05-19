@@ -48,7 +48,7 @@ const DynamicPage = () => {
             </div>
               
             <Sectionn2 location={location} />
-            <Tactics/>
+            <Tactics tacticsList={location?.tactics}/>
 
             <Gallerytext />
             <div className="mx-auto w-full md:h-screen h-[70vh] text-white flex justify-center items-center overflow-x-hidden bg-black">
@@ -57,7 +57,7 @@ const DynamicPage = () => {
             <Section3 location={location} />
             <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
   <YouTubeLink location={location} />
-  <Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/>
+  {/* <Feedback feedbackFromBackend={location?.feedback} movementCardId={location?.movementCardId}/> */}
 </div>
             {/* <ShareButton id={id} movementCardId={location?.movementCardId}  totalShare={location?.share}/>   */}
             
