@@ -4,6 +4,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaQuoteLeft } from 'react-icons/fa';
+import Eshban from '../assets/Eshban.jpeg'
+import RitaThapa from '../assets/Rita Thapa.jpg'
+import Yuvaraj from '../assets/Yuvaraj Acharya.png'
+import peacedirect from '../assets/peacedirect.webp'
 
 const Designed = () => {
 
@@ -64,28 +68,28 @@ const Designed = () => {
           name: 'Peace Direct ',
           role: 'Head of Community @Goldman',
           content: 'Working with Freedom Studio on ‘The Problem with Partnerships’ was more than a production experience; it was a process of deep listening and co-creation between our team. They held the complexity of the topic with care, helped shape the production work with careful detailing and brought our vision to life through effective sound and design. Their ability to combine our story with digital production gave our message the resonance it deserved. ',
-          image: 'https://randomuser.me/api/portraits/women/44.jpg'
+          image: peacedirect
         },
         {
           id: 2,
           name: 'Yuvaraj Acharya,',
           role: 'Country Director, International Republican Institute Nepal.',
           content: 'Freedom Studio delivered more than we imagined. From mobilizing artists and social media influencers to crafting powerful videos and digital art, their team combined speed, creativity, and cultural nuance to help Nepali youth understand ways to counter disinformation effectively. The artistic exhibition in Patan Durbar Square was a brilliant culmination of creative engagement and youth mobilization.',
-          image: 'https://randomuser.me/api/portraits/men/32.jpg'
+          image: Yuvaraj
         },
         {
           id: 3,
           name: 'Eshban Kwesiga',
           role: ' Knowledge Weaving and Influencing Manager, Global Fund for Community Foundation',
           content: 'Too Southern to Be Funded was not just a campaign; it was a statement. And Freedom Studio helped us say it loud and clear. Through striking animations, bold visuals, and collaborative storytelling, they helped us challenge narratives and mobilize solidarity worldwide. Their creative design was sharp, and their process was inclusive where they were able to effectively coordinate with more than 12 partners of GFCF in animation making process. ',
-          image: 'https://randomuser.me/api/portraits/women/63.jpg'
+          image: Eshban
         },
         {
           id: 4,
           name: 'Rita Thapa',
           role: 'Founder Tewa & Nagarik Aawaz',
           content: 'It was my pleasure to get to know Freedom Studio and partner the Anupam Abhiyan (AA) of the IGFF with them as our creative partners. Over a 1-year journey together, I feel we as IGFF and the movement AA, have gained more visibility and better documentation. Aligning with our principles, they have been sincere and dedicated to Nepal’s equitable justice through our 5 yearlong feminist movement building work.',
-          image: 'https://randomuser.me/api/portraits/men/75.jpg'
+          image: RitaThapa
         },
       ];
 
