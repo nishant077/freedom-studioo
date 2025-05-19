@@ -3,18 +3,18 @@ import Map from './InteractiveMap/Map.jsx';
 // import './App.css';
 import MapArea from './InteractiveMap/MapArea.jsx';
 
-import learning from '../assets/gallery1.jpeg'
+// import learning from '../assets/gallery1.jpeg'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import DynamicPage from './components/DynamicPage';
-import { div } from 'framer-motion/client';
-import Dictory from './InteractiveMap/Dictory.jsx';
-import Footer from '../component/Footer.jsx';
-import UsefulLinks from './InteractiveMap/UsefulLinks.jsx';
-import StrategyTactics from './InteractiveMap/StrategyTactics.jsx';
-import FlipTheCard from './InteractiveMap/FlipTheCard.jsx';
-import Testimonials from './InteractiveMap/Testimonials.jsx';
-import Feedback from './InteractiveMap/Feedback.jsx';
+// import { div } from 'framer-motion/client';
+// import Dictory from './InteractiveMap/Dictory.jsx';
+// import Footer from '../component/Footer.jsx';
+// import UsefulLinks from './InteractiveMap/UsefulLinks.jsx';
+// import StrategyTactics from './InteractiveMap/StrategyTactics.jsx';
+// import FlipTheCard from './InteractiveMap/FlipTheCard.jsx';
+// import Testimonials from './InteractiveMap/Testimonials.jsx';
+// import Feedback from './InteractiveMap/Feedback.jsx';
 // import InteractiveMapDescription from './InteractiveMapDescription.jsx';
 // import InteractiveMapDescription from './components/InteractiveMapDescription';
 
@@ -70,13 +70,13 @@ const MapMain = () => {
 <div className="px-4 md:px-8 lg:px-32">
     <div className="border-t border-gray-200 dark:border-gray-700 my-8 mx-auto w-full max-w-4xl"></div>
 </div> */}
-<div className='py-12 px-4 md:px-8 lg:px-32'>
+{/* <div className='py-12 px-4 md:px-8 lg:px-32'> */}
     {/* <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'> */}
         {/* <div className='lg:w-1/2 order-2 lg:order-1 flex justify-center'>
             <img src={uparrow} className='h-auto max-h-96 w-full object-cover' alt="Learning Corner"/>
         </div> */}
         {/* <div className='lg:w-1/2 order-1 lg:order-2'> */}
-        <div className=''>
+        {/* <div className=''>
             <div className='text-center'>
             <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>LEARNING  CORNER</h2>
             </div>
@@ -89,14 +89,14 @@ campaign design, and lived experiences, helping community and leaders
 adapt, resist, and grow. In a world of shifting challenges, the Learning
 Corner nurtures resilience, creativity, and cross-movement solidarity.
             </p>
-            </div>
+            </div> */}
         {/* </div> */}
-    </div>
-</div>
+    {/* </div>
+</div> */}
  
- <Dictory/>
+ {/* <Dictory/> */}
 
- <div className='py-12 px-4 md:px-8 lg:px-32'>
+ {/* <div className='py-12 px-4 md:px-8 lg:px-32'>
     <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
         <div className='lg:w-1/2 order-2 lg:order-1 flex justify-center'>
             <img src={learning} className='h-auto  w-full object-cover' alt="Learning Corner"/>
@@ -118,7 +118,7 @@ engagement and community empowerment.
             </p>
         </div>
     </div>
-</div>
+</div> */}
 
 {/* <div className='py-12 bg-[#9a1d20] px-4 md:px-8 lg:px-32 flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
     <div className='lg:w-1/2'>
@@ -147,14 +147,14 @@ engagement and community empowerment.
         <img src={tatics} className='h-auto  w-full object-cover' alt="Interactive Map"/>
     </div>
 </div> */}
-<FlipTheCard/>
+{/* <FlipTheCard/>
 <StrategyTactics/>
 <UsefulLinks/>
 <Testimonials/>
-<Feedback/>
-                        </div>
-                        <Footer/>
-                        </div>
+<Feedback/> */}
+                         </div>
+                        {/* <Footer/>  */}
+                        </div> 
         
     );
 };

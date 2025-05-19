@@ -51,24 +51,24 @@ const FlipTheCard = () => {
             >
               <div className="flip-card-inner relative w-full h-full transform-style-preserve-3d">
                 {/* Front of Card */}
-                <div className="flip-card-front absolute cursor-pointer inset-0 backface-hidden flex items-center justify-center p-6 bg-white rounded-lg shadow-md border border-gray-100">
+                <div className="flip-card-front absolute cursor-pointer inset-0 backface-hidden flex items-center justify-center p-6 bg-[#9a1d20] rounded-lg shadow-md border-0">
                   <div className="text-center">
-                    <h3 className="text-lg font-droid mb-2 text-gray-800">{note.front}</h3>
+                    <h3 className="text-lg font-droid mb-2 text-white">{note.front}</h3>
                     <div className="absolute bottom-3 left-0 right-0 text-center">
-                      <span className="text-xs text-gray-500">Hover to flip</span>
+                      <span className="text-xs text-gray-200">Hover to flip</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Back of Card */}
                 <div 
-                  className="flip-card-back absolute cursor-pointer inset-0 backface-hidden flex items-center justify-center p-6 rounded-lg"
-                  style={{ backgroundColor: '#9a1d20' }}
+                  className="flip-card-back absolute cursor-pointer inset-0 backface-hidden flex items-center justify-center p-6 rounded-lg shadow-md bottom-0"
+                  style={{ backgroundColor: 'white' }}
                 >
                   <div className="text-center">
-                    <p className="text-white text-sm">{note.back}</p>
+                    <p className="text-black text-sm">{note.back}</p>
                     <div className="absolute bottom-3 left-0 right-0 text-center">
-                      <span className="text-xs text-white opacity-70">Release to return</span>
+                      <span className="text-xs text-black opacity-70">Release to return</span>
                     </div>
                   </div>
                 </div>
