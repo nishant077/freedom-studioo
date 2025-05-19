@@ -48,7 +48,7 @@ const DynamicPage = () => {
             </div>
               
             <Sectionn2 location={location} />
-            <Tactics/>
+            <Tactics tacticsList={location?.tactics}/>
 
             <Gallerytext />
             <div className="mx-auto w-full md:h-screen h-[70vh] text-white flex justify-center items-center overflow-x-hidden bg-black">
