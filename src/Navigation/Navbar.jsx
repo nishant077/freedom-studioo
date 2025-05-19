@@ -274,21 +274,35 @@
 // export default Navbar;
 
 
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import logo from '../assets/logo.PNG';
 import { IoClose } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { useScroll } from '../ContextHook/ScrollProvider';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    toggleMenu();
+    navigate('/', { state: { scrollTo: 'target' } });
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setHoveredItem(null);
+    setServicesOpen(false);
+  };
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
   };
 
   // Animation variants
@@ -375,6 +389,25 @@ const Navbar = () => {
         type: "spring",
         stiffness: 400,
         damping: 10
+      }
+    }
+  };
+
+  const servicesDropdownVariants = {
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    },
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
       }
     }
   };
@@ -507,7 +540,7 @@ const Navbar = () => {
                       onHoverEnd={() => setHoveredItem(null)}
                     >
                       <div className="group">
-                        <Link to="/services" onClick={toggleMenu} className="flex items-center justify-between">
+                        <div className="flex items-center justify-between cursor-pointer" onClick={toggleServices}>
                           <p className="text-3xl text-white md:text-5xl font-droid hover:text-gray-400 transition-colors duration-300">
                             Services
                           </p>
@@ -524,30 +557,42 @@ const Navbar = () => {
                               </motion.div>
                             )}
                           </AnimatePresence>
-                        </Link>
-                        <div className="mt-2 ml-2 flex flex-wrap gap-3">
-                          <motion.div variants={subItemVariants} whileHover="hover">
-                            <Link to="/services/knowledge-design" onClick={toggleMenu} className="block">
-                              <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                Knowledge Design
-                              </p>
-                            </Link>
-                          </motion.div>
-                          <motion.div variants={subItemVariants} whileHover="hover">
-                            <Link to="/services/strategy-development" onClick={toggleMenu} className="block">
-                              <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                Strategy Development
-                              </p>
-                            </Link>
-                          </motion.div>
-                          <motion.div variants={subItemVariants} whileHover="hover">
-                            <Link to="/services/digital-communication" onClick={toggleMenu} className="block">
-                              <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                Digital Communication
-                              </p>
-                            </Link>
-                          </motion.div>
                         </div>
+                        <AnimatePresence>
+                          {servicesOpen && (
+                            <motion.div
+                              variants={servicesDropdownVariants}
+                              initial="closed"
+                              animate="open"
+                              exit="closed"
+                              className="overflow-hidden"
+                            >
+                              <div className="mt-2 ml-2 flex flex-wrap gap-3">
+                                <motion.div variants={subItemVariants} whileHover="hover">
+                                  <Link to="/services/knowledge-design" onClick={toggleMenu} className="block">
+                                    <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
+                                      Knowledge Design
+                                    </p>
+                                  </Link>
+                                </motion.div>
+                                <motion.div variants={subItemVariants} whileHover="hover">
+                                  <Link to="/services/strategy-development" onClick={toggleMenu} className="block">
+                                    <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
+                                      Strategy Development
+                                    </p>
+                                  </Link>
+                                </motion.div>
+                                <motion.div variants={subItemVariants} whileHover="hover">
+                                  <Link to="/services/digital-communication" onClick={toggleMenu} className="block">
+                                    <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
+                                      Digital Communication
+                                    </p>
+                                  </Link>
+                                </motion.div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                     </motion.div>
                     
@@ -556,7 +601,7 @@ const Navbar = () => {
                       onHoverStart={() => setHoveredItem('connect')}
                       onHoverEnd={() => setHoveredItem(null)}
                     >
-                      <Link to="/connect" onClick={toggleMenu} className="group flex items-center justify-between">
+                      <div onClick={handleClick}  className="group flex items-center justify-between">
                         <p className="text-3xl text-white md:text-5xl font-droid hover:text-gray-400 transition-colors duration-300">
                           Connect
                         </p>
@@ -573,7 +618,8 @@ const Navbar = () => {
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </Link>
+                      </div>
+                      
                     </motion.div>
 
                     <motion.div 

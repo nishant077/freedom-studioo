@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useScroll } from '../ContextHook/ScrollProvider';
+import { useLocation } from 'react-router-dom';
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +10,19 @@ const FeedbackForm = () => {
     contactNumber: '',
     message: ''
   });
+
+
+  const location = useLocation();
+
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state?.scrollTo === 'target') {
+      setTimeout(() => {
+        targetRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // small delay ensures DOM is ready
+    }
+  }, [location]);
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -76,7 +91,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="h-auto bg-[#f8f9fa] py-16 px-5 sm:px-6 lg:px-8">
+    <div ref={targetRef} className="h-auto bg-[#f8f9fa] py-16 px-5 sm:px-6 lg:px-8">
       <div className='flex md:justify-evenly justify-center items-center flex-wrap gap-8'>
         <div className="max-w-2xl w-full">
           <div className="text-center mb-12">
