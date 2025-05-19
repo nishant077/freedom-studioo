@@ -4,6 +4,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaQuoteLeft } from 'react-icons/fa';
+import Sadikshya from '../../assets/Sadikshya.jpeg'
+import Revi from '../../assets/Revi.jpeg'
+import Pramila from '../../assets/Pramila.jpeg'
 
 const Testimonials = () => {
 
@@ -63,25 +66,25 @@ const Testimonials = () => {
           id: 1,
           name: '- Radhika Yadav (Anonymity) ',
           content: '“I now understand the necessity of creating roadmap while doing every task, Oh! In protest as well.”',
-          image: 'https://randomuser.me/api/portraits/women/44.jpg'
+          image: ''
         },
         {
           id: 2,
           name: '- Revi Ghimire',
           content: '“As a Gen-Z, I feel along with creating ‘Get ready with me’ video, if I made a simple 2 minutes video on inclusivity, how positively it can aware and impact the entire generation”',
-          image: 'https://randomuser.me/api/portraits/men/32.jpg'
+          image: Revi
         },
         {
           id: 3,
           name: '-Sadikshya Singh ',
           content: '“Just being a better bystander, we can support our hardearned democracy”',
-          image: 'https://randomuser.me/api/portraits/women/63.jpg'
+          image: Sadikshya
         },
         {
           id: 4,
           name: '-Pramila Kathayat',
           content: '“ I find this super easy to use, and imagine if we could make thought provoking meme out of it, it would create more buzz in social media”',
-          image: 'https://randomuser.me/api/portraits/men/75.jpg'
+          image: Pramila
         },
       ];
 

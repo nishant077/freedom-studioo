@@ -263,7 +263,7 @@ const Happening = () => {
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+              <div className="relative h-56 sm:h-64 md:h-96 overflow-hidden">
                 {/* Card Image Carousel */}
                 <div className="relative h-full w-full">
                   {item.images.map((image, imgIndex) => (
