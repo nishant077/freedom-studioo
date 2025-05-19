@@ -1,17 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import team2 from '../../assets/team2.jpg'; 
-import team3 from '../../assets/team3.jpg';
-import team5 from '../../assets/team5.jpg';
-import team6 from '../../assets/team6.jpg';
-import team16 from '../../assets/team1.jpg';
-import team17 from '../../assets/team.JPG';
+
 import kathmandu from '../../assets/kathmandu.png';
 import kathmandu2 from '../../assets/kathmandu2.png';
 import kathmandu3 from '../../assets/kathmandu3.png';
 import kathmandu4 from '../../assets/kathmandu4.png';
 import kathmandu5 from '../../assets/kathmandu5.png';
 import kathmandu6 from '../../assets/kathmandu6.png';
+
 import sudan1 from '../../assets/sudan1.png';
 import sudan2 from '../../assets/sudan2.png';
 import sudan3 from '../../assets/sudan3.png';
@@ -20,24 +16,74 @@ import sudan5 from '../../assets/sudan5.png';
 import sudan6 from '../../assets/sudan6.png';
 import sudan7 from '../../assets/sudan7.png';
 import sudan8 from '../../assets/sudan8.png';
+
 import dang1 from '../../assets/dang1.png';
 import dang2 from '../../assets/dang2.png';
 import dang3 from '../../assets/dang3.png';
 import dang4 from '../../assets/dang4.png';
 import dang5 from '../../assets/dang5.png';
 import dang6 from '../../assets/dang6.png';
+
 import afghanistan1 from '../../assets/afghanistan1.png';
 import afghanistan2 from '../../assets/afghanistan2.png';
 import afghanistan3 from '../../assets/afghanistan3.png';
 import afghanistan4 from '../../assets/afghanistan4.png';
 import afghanistan5 from '../../assets/afghanistan5.png';
 import afghanistan6 from '../../assets/afghanistan6.png';
+
 import tinkune1 from '../../assets/tinkune1.png';
 import tinkune2 from '../../assets/tinkune2.png';
 import tinkune3 from '../../assets/tinkune3.png';
 import tinkune4 from '../../assets/tinkune4.png';
 import tinkune5 from '../../assets/tinkune5.png';
 import tinkune6 from '../../assets/tinkune6.png';
+
+import ko1 from '../../assets/ko2.png';
+import ko2 from '../../assets/ko3.png';
+import ko3 from '../../assets/ko4.png';
+import ko4 from '../../assets/ko5.png';
+import ko5 from '../../assets/ko6.png';
+import ko6 from '../../assets/ko7.png';
+
+import bk1 from '../../assets/bk1.png';
+import bk2 from '../../assets/bk2.png';
+import bk3 from '../../assets/bk3.png';
+import bk4 from '../../assets/bk4.png';
+import bk5 from '../../assets/bk5.png';
+import bk6 from '../../assets/bk6.png';
+import bk7 from '../../assets/bk7.png';
+
+import p1 from '../../assets/p1.png';
+import p2 from '../../assets/p2.png';
+import p3 from '../../assets/p3.png';
+import p4 from '../../assets/p4.png';
+import p5 from '../../assets/p5.png';
+import p6 from '../../assets/p6.png';
+import p7 from '../../assets/p7.png';
+import p8 from '../../assets/p8.png';
+import p9 from '../../assets/p9.png';
+
+import k1 from '../../assets/k1.png';
+import k2 from '../../assets/k2 .png';
+import k3 from '../../assets/k3.png';
+import k4 from '../../assets/k4.png';
+import k5 from '../../assets/k5.png';
+import k6 from '../../assets/k6.png';
+import k7 from '../../assets/k7.png';
+import k8 from '../../assets/k8.png';
+import k9 from '../../assets/k9.png';
+import k10 from '../../assets/k10.png';
+
+import v1 from '../../assets/ve1.png';
+import v2 from '../../assets/ve2.png';
+import v3 from '../../assets/ve3.png';
+import v4 from '../../assets/ve4.png';
+import v5 from '../../assets/ve5.png';
+import v6 from '../../assets/ve6.png';
+import v7 from '../../assets/ve7.png';
+import v8 from '../../assets/ve8.png';
+
+
 import Navbar from '../../Navigation/Navbar';
 import Footer from '../../component/Footer';
 
@@ -119,10 +165,12 @@ const Happening = () => {
       id: 6,
       title: "The Kolkata Incident",
       images: [
-        { id: 'k1', src: team16 },
-        { id: 'k2', src: team17 },
-        { id: 'k3', src: team2 },
-        { id: 'k4', src: team3 }
+        { id: 'k1', src: ko1 },
+        { id: 'k2', src: ko2 },
+        { id: 'k3', src: ko3 },
+        { id: 'k4', src: ko4 },
+        { id: 'k5', src: ko5 },
+        { id: 'k6', src: ko6 }
       ],
       category: "Kolkata",
       date: "February 10, 2023"
@@ -131,12 +179,66 @@ const Happening = () => {
       id: 7,
       title: "Land Rights Protest - Bhaktapur",
       images: [
-        { id: 'b1', src: team2 },
-        { id: 'b2', src: team3 },
-        { id: 'b3', src: team5 },
-        { id: 'b4', src: team6 }
+        { id: 'b1', src: bk1 },
+        { id: 'b2', src: bk2 },
+        { id: 'b3', src: bk3 },
+        { id: 'b4', src: bk4 },
+        { id: 'b5', src: bk5 },
+        { id: 'b6', src: bk6 },
+        { id: 'b7', src: bk7 }
       ],
       category: "Bhaktapur",
+      date: "May 1, 2023"
+    },
+    {
+      id: 8,
+      title: "What is Happening in Prajatantra",
+      images: [
+        { id: 'p1', src: p1 },
+        { id: 'p2', src: p2 },
+        { id: 'p3', src: p3 },
+        { id: 'p4', src: p4 },
+        { id: 'p5', src: p5 },
+        { id: 'p6', src: p6 },
+        { id: 'p7', src: p7 },
+        { id: 'p8', src: p8 },
+        { id: 'p9', src: p9 },
+      ],
+      category: "Prajatantra",
+      date: "May 1, 2007"
+    },
+    {
+      id: 9,
+      title: "What is Happening in Kenya?",
+      images: [
+        { id: 'k1', src: k1 },
+        { id: 'k2', src: k2 },
+        { id: 'k3', src: k3 },
+        { id: 'k4', src: k4 },
+        { id: 'k5', src: k5 },
+        { id: 'k6', src: k6 },
+        { id: 'k7', src: k7 },
+        { id: 'k8', src: k8 },
+        { id: 'k9', src: k9 },
+        { id: 'k10', src: k10 },
+      ],
+      category: "Kenya",
+      date: "May 1, 2023"
+    },
+    {
+      id: 10,
+      title: "What is Happening in Venezuela?",
+      images: [
+        { id: 'v1', src: v1 },
+        { id: 'v2', src: v2 },
+        { id: 'v3', src: v3 },
+        { id: 'v4', src: v4 },
+        { id: 'v5', src: v5 },
+        { id: 'v6', src: v6 },
+        { id: 'v7', src: v7 },
+        { id: 'v8', src: v8 },
+      ],
+      category: "Venezuela",
       date: "May 1, 2023"
     },
   ];

@@ -11,6 +11,7 @@ import KnowledgeDesign from './Services/KnowledgeDesign';
 import StrategyDevelopment from './Services/StrategyDevelopment';
 import DigitalDevelopment from './Services/DigitalDevelopment';
 import Project from './Project/Project';
+import LearningCorner from './LearningCorner/LearningCorner';
 
  
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/services/strategy-development' element={<StrategyDevelopment/>}/>
           <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/>
           <Route path='/project' element={<Project/>}/>
+         <Route path='/learning-corner' element={<LearningCorner/>}/>
         </Routes>
       </div>
     </Router>

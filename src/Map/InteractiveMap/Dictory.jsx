@@ -1,7 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// or if you prefer Link:
-// import { Link } from 'react-router-dom';
 import women1 from '../../assets/Gallery4.jpeg';
 import women2 from '../../assets/Gallery5.jpeg';
 
