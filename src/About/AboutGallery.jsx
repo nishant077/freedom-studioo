@@ -1,16 +1,17 @@
 import {useEffect,useRef} from 'react'
-import working1 from '../assets/workimg1.jpg'
-import working2 from '../assets/workimg2.jpg'
-import working3 from '../assets/workimg3.jpg'
-import working4 from '../assets/workimg4.jpg'
-import working5 from '../assets/workimg5.jpg'
-import working6 from '../assets/workimg6.jpg'
-import working7 from '../assets/workimg7.jpg'
+import About1 from '../assets/About1.jpeg'
+import About2 from '../assets/About2.jpeg'
+import About3 from '../assets/About3.jpeg'
+import About4 from '../assets/About4.jpeg'
+import About5 from '../assets/About5.jpeg'
+import About6 from '../assets/About6.jpeg'
+import About7 from '../assets/About7.jpeg'
+import About8 from '../assets/About8.jpeg'
 import freedom1 from '../assets/freedom1.png'
 import freedom2 from '../assets/freedom2.jpg'
-import women3 from '../assets/women3.jpg'
-import women4 from '../assets/women4.jpg'
-import dang1 from '../assets/dang1.png'
+import About9 from '../assets/About9.jpeg'
+import About10 from '../assets/About10.jpeg'
+
 import {useTransform, useScroll,motion} from 'framer-motion'
 import Lenis from '@studio-freight/lenis'
 import Dimension from './Dimension'
@@ -20,7 +21,7 @@ import './About.css'
 
 const AboutGallery = () => {
 
-    const images=[working1,working2,working3,working4,working5,working6,working7,freedom1,freedom2,women3,women4,dang1
+    const images=[About1,About2,About3,About4,About6,About5,About7,freedom1,freedom2,About8,About9,About10,
 
     ]
    

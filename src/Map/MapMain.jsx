@@ -3,7 +3,7 @@ import Map from './InteractiveMap/Map.jsx';
 // import './App.css';
 import MapArea from './InteractiveMap/MapArea.jsx';
 
-import workimg7 from '../assets/workimg7.jpg'
+import learning from '../assets/gallery1.jpeg'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import DynamicPage from './components/DynamicPage';
@@ -99,7 +99,7 @@ Corner nurtures resilience, creativity, and cross-movement solidarity.
  <div className='py-12 px-4 md:px-8 lg:px-32'>
     <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
         <div className='lg:w-1/2 order-2 lg:order-1 flex justify-center'>
-            <img src={workimg7} className='h-auto  w-full object-cover' alt="Learning Corner"/>
+            <img src={learning} className='h-auto  w-full object-cover' alt="Learning Corner"/>
         </div>
         <div className='lg:w-1/2 order-1 lg:order-2'>
             <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>MOVEMENT SUMMARY</h2>

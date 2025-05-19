@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import team1 from '../../assets/women1.jpg';
+// import team1 from '../../assets/women1.jpg';
 import team2 from '../../assets/team2.jpg'; 
 import team3 from '../../assets/team3.jpg';
 import team5 from '../../assets/team5.jpg';
 import team6 from '../../assets/team6.jpg';
-import team7 from '../../assets/women2.jpg';
-import team8 from '../../assets/women3.jpg';
-import team9 from '../../assets/women4.jpg';
-import team10 from '../../assets/workimg1.jpg';
-import team11 from '../../assets/workimg2.jpg';
-import team12 from '../../assets/workimg3.jpg';
+// import team7 from '../../assets/women2.jpg';
+// import team8 from '../../assets/women3.jpg';
+// import team9 from '../../assets/women4.jpg';
+// import team10 from '../../assets/workimg1.jpg';
+// import team11 from '../../assets/workimg2.jpg';
+// import team12 from '../../assets/workimg3.jpg';
 import team16 from '../../assets/team1.jpg';
 import team17 from '../../assets/team.JPG';
-import team18 from '../../assets/workimg7.jpg';
+// import team18 from '../../assets/workimg7.jpg';
 import kathmandu from '../../assets/kathmandu.png'
 import kathmandu2 from '../../assets/kathmandu2.png'
 import kathmandu3 from '../../assets/kathmandu3.png'
@@ -85,13 +85,13 @@ const Happening = () => {
     {
       id: 6,
       title: "The Kolkata Incident",
-      images: [team16, team17, team18, team1, team2, team3],
+      images: [team16, team17,team2, team3],
       category: "Kolkata"
     },
     {
       id: 7,
       title: "What is Happening in Bhaktapur ? Land-Rights",
-      images: [team1, team2, team3, team5, team6, team7, team8, team9, team10, team11, team12],
+      images: [ team2, team3, team5, team6],
       category: "Bhaktapur"
     },
   ];

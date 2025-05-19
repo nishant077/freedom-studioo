@@ -1,12 +1,13 @@
 import React from 'react'
-import knowledgedesign from '../assets/knowledgedesign.jpeg'
+import knowledgedesign from '../assets/Strategy Building.jpeg'
 import Navbar from '../Navigation/Navbar'
-import working2 from '../assets/workimg2.jpg'
-import working1 from '../assets/workimg1.jpg';
-import working3 from '../assets/workimg3.jpg';
-import working4 from '../assets/workimg4.jpg';
-import working5 from '../assets/workimg5.jpg';
-import working6 from '../assets/workimg6.jpg';
+import working2 from '../assets/Policy.jpeg'
+import working1 from '../assets/Gallery22.jpg';
+import working3 from '../assets/Healing.jpeg';
+import working4 from '../assets/Gallery21.jpeg';
+import working5 from '../assets/Campaign.jpeg';
+import working6 from '../assets/Institution.jpeg';
+import Footer from '../component/Footer';
 
 const StrategyDevelopment = () => {
 
@@ -39,7 +40,7 @@ const StrategyDevelopment = () => {
   return (
     <>
       <div className='relative h-screen w-full overflow-hidden bg-black opacity-95'>
-        {/* Image with overlay */}
+     
         <div className='absolute inset-0 z-0'>
           <img 
             src={knowledgedesign} 
@@ -59,7 +60,7 @@ const StrategyDevelopment = () => {
             policies so you don’t just grow, you lead with purpose.
             </p>
             
-            {/* CTA Button */}
+         
           </div>
         </div>
       </div>
@@ -89,23 +90,15 @@ DESIGN"/>
             </div>
         </div>
     </div>
-    {/* <div className='bg-black w-full h-auto md:py-10 md:px-10 py-5 px-5'>
-             <h3 className='text-2xl md:text-5xl'>WHAT WE OFFER</h3>
-             <div className='mt-5'>
-                 
-             </div>
-    </div> */}
+ 
     <div className='bg-[#4a4a4a] w-full mb-2 h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
   <div className='max-w-7xl mx-auto'>
-    {/* Section Header */}
+  
     <div className='text-center mb-16'>
       <h2 className='mt-5 mb-6 font-droid text-4xl text-white md:text-5xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>
-      <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-        Discover our comprehensive services designed to transform your business
-      </p>
     </div>
 
     {/* Cards Grid */}
@@ -115,7 +108,7 @@ DESIGN"/>
           key={key}
           className='group relative bg-white rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full'
         >
-          {/* Image Container with Hover Effect */}
+       
           <div className='overflow-hidden'>
             <img 
               src={item.image} 
@@ -124,7 +117,7 @@ DESIGN"/>
             />
           </div>
           
-          {/* Content Container */}
+      
           <div className='p-6 flex flex-col flex-1'>
             <h3 className='font-droid text-xl font-bold text-black mb-3 group-hover:text-[#9a1d20] transition-colors duration-300'>
               {item.title}
@@ -132,13 +125,14 @@ DESIGN"/>
             
           </div>
           
-          {/* Hover Border Effect */}
+        
           <div className='absolute inset-0 border-2 border-transparent group-hover:border-[#9a1d20] rounded-xl pointer-events-none transition-all duration-500'></div>
         </div>
       ))}
     </div>
   </div>
 </div>
+<Footer/>
     </>
   )
 }

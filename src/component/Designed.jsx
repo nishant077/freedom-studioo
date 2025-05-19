@@ -61,30 +61,30 @@ const Designed = () => {
   const testimonials = [
         {
           id: 1,
-          name: 'Elona Mosco',
+          name: 'Peace Direct ',
           role: 'Head of Community @Goldman',
-          content: 'Yes, no doubt it is indeed expensive, but there\'s a clear reason why it\'s the best tax firm in the world.',
+          content: 'Working with Freedom Studio on ‘The Problem with Partnerships’ was more than a production experience; it was a process of deep listening and co-creation between our team. They held the complexity of the topic with care, helped shape the production work with careful detailing and brought our vision to life through effective sound and design. Their ability to combine our story with digital production gave our message the resonance it deserved. ',
           image: 'https://randomuser.me/api/portraits/women/44.jpg'
         },
         {
           id: 2,
-          name: 'Michael Chen',
-          role: 'CEO, Startup Ventures',
-          content: 'Exceptional service from start to finish. They understood our vision perfectly and delivered beyond our expectations.',
+          name: 'Yuvaraj Acharya,',
+          role: 'Country Director, International Republican Institute Nepal.',
+          content: 'Freedom Studio delivered more than we imagined. From mobilizing artists and social media influencers to crafting powerful videos and digital art, their team combined speed, creativity, and cultural nuance to help Nepali youth understand ways to counter disinformation effectively. The artistic exhibition in Patan Durbar Square was a brilliant culmination of creative engagement and youth mobilization.',
           image: 'https://randomuser.me/api/portraits/men/32.jpg'
         },
         {
           id: 3,
-          name: 'Emma Rodriguez',
-          role: 'Product Manager, DesignHub',
-          content: 'The quality of work and professionalism is outstanding. They met all our tight deadlines.',
+          name: 'Eshban Kwesiga',
+          role: ' Knowledge Weaving and Influencing Manager, Global Fund for Community Foundation',
+          content: 'Too Southern to Be Funded was not just a campaign; it was a statement. And Freedom Studio helped us say it loud and clear. Through striking animations, bold visuals, and collaborative storytelling, they helped us challenge narratives and mobilize solidarity worldwide. Their creative design was sharp, and their process was inclusive where they were able to effectively coordinate with more than 12 partners of GFCF in animation making process. ',
           image: 'https://randomuser.me/api/portraits/women/63.jpg'
         },
         {
           id: 4,
-          name: 'David Wilson',
-          role: 'CTO, InnovateSoft',
-          content: 'Their technical expertise solved complex challenges we were facing. The team is knowledgeable and responsive.',
+          name: 'Rita Thapa',
+          role: 'Founder Tewa & Nagarik Aawaz',
+          content: 'It was my pleasure to get to know Freedom Studio and partner the Anupam Abhiyan (AA) of the IGFF with them as our creative partners. Over a 1-year journey together, I feel we as IGFF and the movement AA, have gained more visibility and better documentation. Aligning with our principles, they have been sincere and dedicated to Nepal’s equitable justice through our 5 yearlong feminist movement building work.',
           image: 'https://randomuser.me/api/portraits/men/75.jpg'
         },
       ];
@@ -163,12 +163,12 @@ const Designed = () => {
                 }}
               >
                 {/* Top colored section */}
-                <div className="h-[60%] bg-[#9a1d20] p-8 flex flex-col relative">
+                <div className="h-[70%] bg-[#9a1d20] p-8 flex flex-col relative">
                   {/* Quote icon positioned at top right */}
                   <div className="absolute top-6 left-8">
                     <FaQuoteLeft size={20} className="text-white opacity-30 text-3xl" />
                   </div>
-                  <p className="text-white text-lg leading-relaxed mt-8 z-10">
+                  <p className="text-white text-xs leading-relaxed mt-3  z-10">
                     {testimonial.content}
                   </p>
                   
@@ -183,10 +183,10 @@ const Designed = () => {
                 </div>
                 
                 {/* Bottom white section */}
-                <div className="h-[40%] bg-white pt-14 pb-6 px-8 flex flex-col items-center justify-center">
+                <div className="h-[30%] bg-white pt-14 pb-6 px-8 flex flex-col items-center justify-center">
                   <div className="text-center">
-                    <h4 className="font-bold text-gray-900 text-base">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-xs mt-2">{testimonial.role}</p>
+                    <h4 className="font-bold text-gray-900 text-sm">{testimonial.name}</h4>
+                    <p className="text-gray-600 text-xs">{testimonial.role}</p>
                   </div>
                 </div>
               </motion.div>

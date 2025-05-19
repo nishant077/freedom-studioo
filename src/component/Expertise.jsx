@@ -1,7 +1,7 @@
 import React from 'react';
-import image1 from '../assets/workimg1.jpg';
-import image2 from '../assets/workimg2.jpg';
-import image3 from '../assets/workimg3.jpg';
+import image1 from '../assets/Knowledge Development.jpeg';
+import image2 from '../assets/Strategy Building.jpeg';
+import image3 from '../assets/Digital Communication.jpeg';
 import bulb from '../assets/bulb.png';
 import world from '../assets/Countries.png'
 import drop from '../assets/4.png'
@@ -14,21 +14,21 @@ const Expertise = () => {
     const data = [
         {
             image: image1,
-            title: 'Multimedia and Storytelling',
-            description: 'Multimedia & Storytelling From the streets to the screen, we tell stories that matter. With video, sound, visuals, and heart, we craft narratives that move people, build momentum, and create meaning.',
-            tags: ['Video Production', 'Digital Storytelling', 'Content Strategy', 'Brand Narrative']
+            title: 'KNOWLEDGE DESIGN',
+            description: 'From data to direction, we turn complexity into clarity, so you don’t just analyze, you act with insight.',
+            tags: ['Quantitative and Qualitative Research', 'Data Analysis', 'Data Visualization', 'Stakeholder and Market Scrutiny', 'System Mapping','Design Thinking']
         },
         {
             image: image2,
-            title: 'Institution Building and Well being',
-            description: 'Institution Building & Wellbeing Strong missions need strong foundations. We support organizations to grow with clarity, care, and culture, building teams, systems, and strategies that last.',  
-            tags: ['Organizational Development', 'Team Building', 'Workplace Wellness', 'Leadership Training']
+            title: 'STRATEGY DEVELOPMENT',
+            description: 'From internal clarity to external impact, we co-create cultures, strategies & policies so you don’t just grow, you lead with purpose.',  
+            tags: ['Co-Creation & Facilitation', 'Policy & Governance Design', 'Healing Centered Planning & Sessions', 'Equity Driven Systems','Campaign & Advocacy Strategy','Institution Building Support']
         },
         {
             image: image3,
-            title: 'Data Analysis and Research',
-            description: 'Data, Research & Insights We turn questions into clarity. By blending research with creative analysis, we make sense of the complex, so you can make smarter decisions and deeper impact.', 
-            tags: ['Data Visualization', 'Market Research', 'Analytics', 'Impact Measurement']
+            title: 'DIGITAL COMMUNICATION',
+            description: 'Our campaigns are grounded in purpose and shaped by relevance so you don’t just post, you participate.', 
+            tags: ['Multimedia Video Production', 'Narrative Development & Storyboarding', 'Digital Transformation Strategy', 'Creative Branding & Campaign','Social Media Design & Marketing','Event Coverage']
         }
     ];
 
