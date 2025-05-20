@@ -25,9 +25,11 @@ const LearningCorner = () => {
       
       <Navbar/>
 
-
-
+      <a className='w-[80vh] h-[60vh]' href="/map">
       <LearningCornerMap/>
+            </a>
+
+      
       
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mt-10 md:mt-20'>

@@ -121,7 +121,7 @@ function MapArea({ SendDistrictDetails }) {
                               ))
                             : districts.map((district, index) => (
                                   <option key={index} value={`${district.name}|${district.momentIssue}`}>
-                                      {district.name} - {district.momentIssue}
+                                    {district.momentIssue}
                                   </option>
                               ))}
                     </select>

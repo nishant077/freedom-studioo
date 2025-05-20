@@ -51,7 +51,7 @@ const LeafletMap = ({ district, momentIssue, actors, latitude, longitude }) => {
           L.geoJSON(data, {
             style: {
               color: '#800000',
-              weight: 0.5,
+              weight: 0.7,
               fillOpacity: 0,
             },
             onEachFeature: (feature, layer) => {
