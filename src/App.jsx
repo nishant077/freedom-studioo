@@ -12,6 +12,7 @@ import StrategyDevelopment from './Services/StrategyDevelopment';
 import DigitalDevelopment from './Services/DigitalDevelopment';
 import Project from './Project/Project';
 import LearningCorner from './LearningCorner/LearningCorner';
+import VideoSeries from './Map/InteractiveMap/VideoSeries';
 
  
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/dynamic/:id" element={<DynamicPage />} />
           <Route path="/map" element={<MapMain />} />
           <Route path='/happening' element={<Happening/>}/>
+          <Route path='/videos' element={<VideoSeries/>}/>
           <Route path='/services/knowledge-design' element={<KnowledgeDesign/>}/>
           <Route path='/services/strategy-development' element={<StrategyDevelopment/>}/>
           <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/>

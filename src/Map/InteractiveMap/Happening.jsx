@@ -342,7 +342,7 @@ const Happening = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-droid mb-4 text-white">
             What's Happening
           </h2>
           <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
