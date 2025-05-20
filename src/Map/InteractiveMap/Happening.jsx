@@ -83,6 +83,14 @@ import v6 from '../../assets/ve6.png';
 import v7 from '../../assets/ve7.png';
 import v8 from '../../assets/ve8.png';
 
+import mu1 from '../../assets/mu1.png';
+import mu2 from '../../assets/mu2.png';
+import mu3 from '../../assets/mu3.png';
+import mu4 from '../../assets/mu4.png';
+import mu5 from '../../assets/mu5.png';
+import mu6 from '../../assets/mu6.png';
+import mu7 from '../../assets/mu7.png';
+
 
 import Navbar from '../../Navigation/Navbar';
 import Footer from '../../component/Footer';
@@ -239,6 +247,21 @@ const Happening = () => {
         { id: 'v8', src: v8 },
       ],
       category: "Venezuela",
+      date: "May 1, 2023"
+    },
+    {
+      id: 11,
+      title: "What is Happening in Mukkumlung?",
+      images: [
+        { id: 'm1', src: mu1 },
+        { id: 'm2', src: mu2 },
+        { id: 'm3', src: mu3 },
+        { id: 'm4', src: mu4 },
+        { id: 'm5', src: mu5 },
+        { id: 'm6', src: mu6 },
+        { id: 'm7', src: mu7 },
+      ],
+      category: "Mukkumlung",
       date: "May 1, 2023"
     },
   ];

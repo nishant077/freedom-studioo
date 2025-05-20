@@ -161,7 +161,7 @@ const Designed = () => {
                 variants={cardVariants}
                 className="rounded-xl overflow-hidden border border-gray-200 flex-shrink-0 relative bg-white"
                 style={{ 
-                  height: '340px', // Slightly increased height
+                  height: '380px', // Slightly increased height
                   width: '380px',
                   boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
                 }}
