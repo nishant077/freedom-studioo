@@ -5,14 +5,14 @@ import './Font.css';
 import Footer from './Footer';
 import OurWork from './OurWork';
 import Navbar from '../Navigation/Navbar';
-import Homepagevideo from '../assets/HeroPageVideo.mp4'
+import Homepagevideo from '../assets/hero video.mp4'
 import HomePageMap from './HomePageMap';
 import KeyImpact from './KeyImpact';
 import Expertise from './Expertise';
 import FeedbackForm from '../About/FeedbackForm';
 
 const Homepage = () => {
-  const headline = "Freedom Studio is a creative initiative that empowers social movements and civic organizations through strategic nonviolent action and digital innovation. Through its non-profit and social entrepreneurial model, Freedom Studio fosters leadership, strengthens activism, and provides cutting-edge creative solutions to drive meaningful social change."
+  const headline = "Freedom Studio is a creative company that offers strategic and innovative solutions to ethical businesses and social organizations worldwide. We collaborate with such institutions to conduct research and data analysis, design policies and strategies, and develop impactful digital campaigns and social media content."
   
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
