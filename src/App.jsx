@@ -13,6 +13,7 @@ import DigitalDevelopment from './Services/DigitalDevelopment';
 import Project from './Project/Project';
 import LearningCorner from './LearningCorner/LearningCorner';
 import VideoSeries from './Map/InteractiveMap/VideoSeries';
+import ScrollToTop from './component/ScrollToTop';
 
  
 function App() {
@@ -20,7 +21,7 @@ function App() {
     <Router>
       <div className="App">
         {/* <Navigation /> */}
-        
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Service />} />
