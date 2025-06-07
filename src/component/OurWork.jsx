@@ -49,7 +49,7 @@ const OurWork = () => {
           }}
           transition={{
             repeat: Infinity,
-            duration: 40, // Longer duration for more images
+            duration: 80, 
             ease: "linear",
           }}
         >

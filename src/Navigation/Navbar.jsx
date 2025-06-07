@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import logo from '../assets/logo.PNG';
 import { IoClose } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaArrowRight } from 'react-icons/fa';
 import { useScroll } from '../ContextHook/ScrollProvider';
 
 
@@ -138,9 +138,9 @@ const Navbar = () => {
 
   return (
     <div className='fixed top-0 w-full z-50'>
-      {/* Logo on left and Menu button on right - always visible */}
+    
       <div className='flex justify-between items-center px-5 md:px-28'>
-        {/* Logo on left */}
+        
         <div className='z-50'>
           <Link to="/">
             <img 
@@ -451,9 +451,9 @@ const Navbar = () => {
                     whileHover="hover"
                     className="relative group"
                   >
-                    <FaWhatsapp className="text-2xl text-gray-400 hover:text-green-500 transition-colors" />
+                    <FaLinkedin className="text-2xl text-gray-400 hover:text-[#0077B5] transition-colors" />
                     <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                      WhatsApp
+                      Linkedin
                     </span>
                   </motion.a>
                 </motion.div>
