@@ -7,34 +7,60 @@ import working3 from '../assets/Gallery14.jpeg';
 import working4 from '../assets/Creative.jpeg';
 import working5 from '../assets/Gallery17.jpeg';
 import working6 from '../assets/Event.jpeg';
+import working7 from '../assets/Gallery4.jpeg';
+import working8 from '../assets/Gallery6.jpeg';
+import working9 from '../assets/Gallery8.jpeg';
+import working10 from '../assets/Gallery11.jpeg';
+import working11 from '../assets/Gallery12.jpeg';
+
 import Footer from '../component/Footer';
 
 const DigitalDevelopment = () => {
 
      const offer = [
         {
-          title: 'Multimedia Video Production',
+          title: 'Website & Platform Development',
           image: working1,
         },
         {
-          title: 'Narrative Development & Storyboarding',
+          title: 'Digital Ecosystem Strategy',
           image: working2,
         },
         {
-          title: 'Digital Transformation Strategy',
+          title: 'User Experience (UX/UI) Design',
           image: working3,
         },
         {
-          title: 'Creative Branding & Campaign',
+          title: 'Civic Tech Tools',
           image: working4,
         },
         {
-          title: 'Social Media Design & Marketing',
+          title: 'Data-Driven Campaign Infrastructure',
           image: working5,
         },
         {
-          title: 'Event Coverage',
+          title: 'Digital Security & Accessibility Integration',
           image: working6,
+        },
+        {
+          title: 'Mapping & Visualization Tools',
+          image: working7,
+        },
+        {
+          title: 'Online Learning Spaces',
+          image: working8,
+        },
+        {
+          title: 'Community Portals',
+          image: working9,
+        },
+        {
+          title: 'Digital Presence Strategy',
+          image: working10,
+        },
+        {
+          title: 'Digital Transformation Strategy',
+          image: working11,
         },
       ];
   return (
@@ -56,8 +82,7 @@ const DigitalDevelopment = () => {
             WE MOVE WITH MEANING
             </h3>
             <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white opacity-90 leading-relaxed'>
-            Our campaigns are grounded in purpose and shaped by relevance
-so you don’t just post, you participate.
+            We build meaningful digital systems, so movements and organizations don’t just adapt; they thrive in a rapidly changing world.
             </p>
             
          
@@ -74,20 +99,10 @@ so you don’t just post, you participate.
 DESIGN"/>
             </div>
             <div className='lg:w-1/2 order-1 lg:order-2'>
-                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-6xl font-bold'>
-                DIGITAL COMMUNICATION</h2>
+                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>
+                DIGITAL TRANSFORMATION</h2>
                 <p className='opacity-80 text-justify  leading-relaxed'>
-                Our Digital Communication approach helps
-ethical brands, influencers, changemakers,
-organizations, and campaigns to connect with
-the right audience through meaningful
-storytelling and creative design. We develop
-digital strategy, creative branding, multimedia
-contents, 2D&3D videos, and social media
-narratives that resonate across social media
-platforms. Our work is collaborative and culturally
-attuned so that the voices, values, and visions of
-our clients are expressed clearly and creatively.
+                We create digital ecosystems that enable movements, organizations and small businesses to flourish in an ever evolving world. Our approach combines platform development with UX/UI design, civic tech innovation, and data-driven tools to support learning, collaboration, and campaigning. From interactive engagement to secure online spaces, we ensure accessibility, safety, and strategic alignment so that partners digital presence is transformed.
                 </p>
             </div>
         </div>
@@ -97,7 +112,7 @@ our clients are expressed clearly and creatively.
   <div className='max-w-7xl mx-auto'>
   
     <div className='text-center mb-16'>
-      <h2 className='mt-5 mb-6 font-droid text-4xl text-white md:text-5xl font-bold'>
+      <h2 className='mt-5 mb-6 font-droid text-3xl text-white md:text-4xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>

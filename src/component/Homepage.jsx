@@ -1,4 +1,4 @@
-import {React, useRef} from 'react';
+import {React, useRef, useState, useEffect} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Designed from './Designed';
 import './Font.css';
@@ -10,9 +10,10 @@ import HomePageMap from './HomePageMap';
 import KeyImpact from './KeyImpact';
 import Expertise from './Expertise';
 import FeedbackForm from '../About/FeedbackForm';
+import AnimatedVideos from './AnimatedVideos';
 
 const Homepage = () => {
-  const headline = "Freedom Studio is a creative company that offers strategic and innovative solutions to ethical businesses and social organizations worldwide. We collaborate with such institutions to conduct research and data analysis, design policies and strategies, and develop impactful digital campaigns and social media content."
+  const headline = "Freedom Studio is a civic media agency that offers strategic, creative and digital solutions to social movements, nonprofit organizations, ethical businesses worldwide. "
   
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -20,6 +21,46 @@ const Homepage = () => {
     offset: ["start start", "end end"]
   });
   
+  // Typewriter animation states
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const words = ['hange', 'ollaboration', 'are']; // Note: 'C' is removed from each word
+  const typingSpeed = 150;
+  const deletingSpeed = 50;
+  const delayBetweenWords = 1500;
+
+  useEffect(() => {
+    let timeout;
+    
+    if (isDeleting) {
+      // Deleting text
+      if (currentText.length > 0) {
+        timeout = setTimeout(() => {
+          setCurrentText(currentText.substring(0, currentText.length - 1));
+        }, deletingSpeed);
+      } else {
+        // Switch to next word after deleting is complete
+        setIsDeleting(false);
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+      }
+    } else {
+      // Typing text
+      if (currentText.length < words[currentWordIndex].length) {
+        timeout = setTimeout(() => {
+          setCurrentText(words[currentWordIndex].substring(0, currentText.length + 1));
+        }, typingSpeed);
+      } else {
+        // Start deleting after delay
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, delayBetweenWords);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentText, currentWordIndex, isDeleting, words]);
+
   // First text appears (0-0.3), stays (0.3-0.5), disappears (0.5-0.7)
   const firstHeadlineOpacity = useTransform(scrollYProgress, 
     [0, 0.3, 0.5, 0.7],
@@ -87,7 +128,7 @@ const Homepage = () => {
           <h1 className="text-white text-4xl md:text-7xl font-droid text-center px-4 leading-tight">
             When Creativity 
             <br />
-            Meets Change
+            Meets <span className="inline-block font-droid">C{currentText}</span>
           </h1>
         </motion.div>
 
@@ -125,7 +166,7 @@ const Homepage = () => {
             viewport={{ once: true }}
             className='font-droid text-white text-center text-3xl md:text-4xl'
           >
-            Interactive Map 
+            Movement Map 
           </motion.h2>
           <div className="border border-white mt-3">
             <a href="/map">
@@ -137,6 +178,7 @@ const Homepage = () => {
         <Expertise/>
         <KeyImpact/>
         <Designed />
+        <AnimatedVideos/>
         <OurWork/>
         <FeedbackForm/>
         <Footer/>

@@ -295,21 +295,21 @@ const Navbar = () => {
                                 <motion.div variants={subItemVariants} whileHover="hover">
                                   <Link to="/services/knowledge-design" onClick={toggleMenu} className="block">
                                     <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                      Knowledge Design
+                                      Strategic Design
                                     </p>
                                   </Link>
                                 </motion.div>
                                 <motion.div variants={subItemVariants} whileHover="hover">
                                   <Link to="/services/strategy-development" onClick={toggleMenu} className="block">
                                     <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                      Strategy Development
+                                      Creative Communication
                                     </p>
                                   </Link>
                                 </motion.div>
                                 <motion.div variants={subItemVariants} whileHover="hover">
                                   <Link to="/services/digital-communication" onClick={toggleMenu} className="block">
                                     <p className="text-xs text-gray-300 hover:text-white transition-colors duration-300 px-2 py-1 bg-gray-800 rounded">
-                                      Digital Communication
+                                    Digital Transformation
                                     </p>
                                   </Link>
                                 </motion.div>

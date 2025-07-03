@@ -1,19 +1,24 @@
-import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
-import team1 from '../assets/team1.jpg';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import team1 from '../assets/Nishchhal.png';
 import team2 from '../assets/team2.jpg'; 
 import team3 from '../assets/team3.jpg';
 import team4 from '../assets/Aayush.jpeg';
-import team5 from '../assets/Binaya Rimal.jpeg';
-import team6 from '../assets/team6.jpg';
+import team5 from '../assets/Sijendra.png';
+import team6 from '../assets/Renu.jpg';
 import team7 from '../assets/Ajit Kumar Bashyal.jpeg';
-import team8 from '../assets/Rishita Khatri.jpeg';
+import team8 from '../assets/Binaya Rimal.jpeg';
+import team9 from '../assets/Rishita Khatri.jpeg';
+import team10 from '../assets/Sahaj.jpeg'
+import team11 from '../assets/Aditya.png';
+import team12 from '../assets/Bikki.png';
 
 const Team = () => {
     const team = [
         {
-            name: 'Nishchhal Kharel',
-            role: 'Executive Director',
+            name: 'Nishchhal Kharal',
+            role: 'Chief Executive Officer',
             image: team1
         },
         {
@@ -23,95 +28,149 @@ const Team = () => {
         },
         {
             name: 'Pratik Karmacharya',
-            role: 'Director of Advocacy',
+            role: 'Advocacy Director',
             image: team3
         },
         {
             name: 'Aayush Pantha',
-            role: 'Multimedia Manager',
+            role: 'Multimedia Director',
             image: team4
         },
         {
-            name: 'Binaya Rimal',
-            role: 'Member',
+            name: 'Sijendra Thapa',
+            role: 'Multimedia Manager',
             image: team5
         },
         {
-            name: 'Sadikshya Singh',
-            role: 'Member',
+            name: 'Renu Ghimire',
+            role: 'Program Officer',
             image: team6
         },
-        
-            {
-                name: 'Ajit Kumar Bashyal',
-                role: 'Member',
-                image: team7
-            },
-            {
-                name: 'Rishita Khatri',
-                role: 'Member',
-                image: team8
-            },
-        
+        {
+            name: 'Ajit Kumar Bashyal',
+            role: 'Operations Associate',
+            image: team7
+        },
+        {
+            name: 'Binaya Rimal',
+            role: 'Art Curator',
+            image: team8
+        },
+        {
+            name: 'Rishita Khatri',
+            role: 'Artist Curator',
+            image: team9
+        },
+        {
+            name: 'Sahaj Tamrakar',
+            role: 'Animator',
+            image: team10
+        },
+        {
+            name: 'Aaditya Acharya',
+            role: ' Multimedia Associate',
+            image: team11
+        },
+        {
+            name: 'Bikki Tamang',
+            role: 'Illustrator',
+            image: team12
+        },
+       
     ];
 
-    // Duplicate the team array to create seamless looping
-    const duplicatedTeam = [...team, ...team, ...team];
-    const containerRef = useRef(null);
-    const controls = useAnimation();
-    const isInView = useInView(containerRef, { once: false });
+    const [currentGroup, setCurrentGroup] = useState(0);
+    const cardsPerGroup = 4;
+    const totalGroups = Math.ceil(team.length / cardsPerGroup);
 
-    useEffect(() => {
-        if (isInView) {
-            controls.start({
-                x: ['0%', `-${100 / 3}%`], // Move by one-third of the total width
-                transition: {
-                    x: {
-                        repeat: Infinity,
-                        duration: 20,
-                        ease: 'linear',
-                    },
-                },
-            });
-        } else {
-            controls.stop();
-        }
-    }, [isInView, controls]);
+    const nextGroup = () => {
+        setCurrentGroup((prev) => (prev + 1) % totalGroups);
+    };
+
+    const prevGroup = () => {
+        setCurrentGroup((prev) => (prev - 1 + totalGroups) % totalGroups);
+    };
+
+    const getCurrentCards = () => {
+        const startIndex = currentGroup * cardsPerGroup;
+        const endIndex = startIndex + cardsPerGroup;
+        return team.slice(startIndex, endIndex);
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
 
     return (
-        <div className='w-full h-auto bg-white md:py-10 py-5 md:px-10 px-4 overflow-hidden'>
-            <div className='md:mt-5 mt-2'>
-                <h2 className='md:text-4xl text-3xl font-droid text-center text-black'>Our Team</h2>
-            </div>
-            
-            <div 
-                ref={containerRef}
-                className='relative w-full overflow-x-hidden py-10'
-            >
-                <motion.div
-                    className='flex md:justify-between justify-center items-center md:mt-10 mt-5 gap-5'
-                    animate={controls}
-                    style={{ width: '300%' }} // Triple width to accommodate duplicates
-                >
-                    {duplicatedTeam.map((member, index) => (
-                        <div 
-                            key={`${member.name}-${index}`} 
-                            className='flex-shrink-0 md:mt-10 mt-5'
+        <div className="w-full bg-gradient-to-br from-blue-50 to-purple-50 py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-droid text-gray-800  mb-2">Our Team</h2>
+                </div>
+
+                <div className="relative">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentGroup}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.5 }}
+                            className="flex justify-center gap-6"
                         >
-                            <div className='w-full'>
-                                <img 
-                                    src={member.image} 
-                                    alt={member.name} 
-                                    className='md:w-60 md:h-52 w-44 h-36 rounded-lg object-cover'
-                                />
-                            </div>
-                            <div className='text-black mt-4 text-center'>
-                                <h4 className='md:text-base text-sm font-droid'>{member.name}</h4>
-                                <p className='md:text-sm text-xs font-thin opacity-80'>{member.role}</p>
-                            </div>
-                        </div>
+                            {getCurrentCards().map((member, index) => (
+                                <motion.div
+                                    key={`${member.name}-${index}`}
+                                    variants={cardVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden w-64 flex-shrink-0"
+                                >
+                                    <div className="h-56 overflow-hidden">
+                                        <img 
+                                            src={member.image} 
+                                            alt={member.name} 
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div className="p-4 text-center">
+                                        <h3 className="text-lg font-droid text-gray-800">{member.name}</h3>
+                                        <p className="text-[#9a1d20] text-sm font-medium">{member.role}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </AnimatePresence>
+
+                    <button 
+                        onClick={prevGroup}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9a1d20]"
+                        aria-label="Previous group"
+                    >
+                        <FaChevronLeft className="text-[#9a1d20] text-xl" />
+                    </button>
+                    
+                    <button 
+                        onClick={nextGroup}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#9a1d20]"
+                        aria-label="Next group"
+                    >
+                        <FaChevronRight className="text-[#9a1d20] text-xl" />
+                    </button>
+                </div>
+
+                <div className="flex justify-center mt-8 space-x-2">
+                    {Array.from({ length: totalGroups }).map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentGroup(index)}
+                            className={`w-3 h-3 rounded-full ${currentGroup === index ? 'bg-[#9a1d20]' : 'bg-gray-300'}`}
+                            aria-label={`Go to group ${index + 1}`}
+                        />
                     ))}
-                </motion.div>
+                </div>
             </div>
         </div>
     );

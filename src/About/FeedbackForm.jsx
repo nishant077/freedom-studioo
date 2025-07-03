@@ -91,12 +91,11 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div ref={targetRef} className="h-auto bg-[#f8f9fa] py-16 px-5 sm:px-6 lg:px-8">
-      <div className='flex md:justify-evenly justify-center items-center flex-wrap gap-8'>
-        <div className="max-w-2xl w-full">
-          <div className="text-center mb-12">
-            <h2 className="md:text-4xl text-3xl text-black font-droid mb-3">Share Your Thoughts</h2>
-            <p className="text-gray-600 md:text-lg text-base">We value your feedback and would love to hear from you</p>
+    <div ref={targetRef} className="h-auto bg-[#f8f9fa] py-12 px-3 sm:px-4 lg:px-4">
+      <div className='flex md:justify-evenly justify-center items-center flex-wrap gap-4'>
+        <div className="max-w-lg w-full">
+          <div className="text-center mb-4">
+            <h2 className="md:text-4xl text-3xl text-black font-droid">Work With Us</h2>
           </div>
           
           {submitSuccess ? (
@@ -181,7 +180,7 @@ const FeedbackForm = () => {
                   htmlFor="contactNumber" 
                   className="absolute left-3 -top-2.5 bg-white px-1 text-sm text-gray-600 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-[#9a1d20]"
                 >
-                  Contact Number (Optional)
+                 Organization Name *
                 </label>
                 {errors.contactNumber && <p className="mt-1 text-sm text-red-600">{errors.contactNumber}</p>}
               </div>
@@ -219,29 +218,43 @@ const FeedbackForm = () => {
                       </svg>
                       Submitting...
                     </>
-                  ) : 'Submit Feedback'}
+                  ) : 'Submit '}
                 </button>
               </div>
             </form>
           )}
           
-          <div className="md:mt-12 mt-8 text-center text-gray-300 text-sm">
-            <p>We'll get back to you within 24 hours</p>
+          <div className="md:mt-10 mt-6 text-center text-gray-300 text-sm">
+            <p>Let’s Work Together</p>
           </div>
         </div>
         
         <div className=''>
         <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
-            <h3 className="text-xl font-droid text-gray-800 mb-4">Our Location</h3>
+            <h3 className="text-xl font-droid text-gray-800 mb-4">Main Office</h3>
             <div className="rounded-lg overflow-hidden">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.3608873371442!2d85.33719106993117!3d27.68694690078486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1996a8d615f9%3A0xca3d4207589f4c3b!2sMinbhawan%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1744389136209!5m2!1sen!2snp"  
-          className="md:w-[500px] h-[400px] sm:h-[400px] md:h-[500px] border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          className="md:w-[300px] h-[200px] sm:h-[200px] md:h-[300px] border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div className="mt-4 text-gray-600">
               <p className="font-medium">Minbhawan Marg, Kathmandu 44600</p>
             </div>
           </div>
           </div>
+
+          <div className=''>
+        <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
+            <h3 className="text-xl font-droid text-gray-800 mb-4">Branch</h3>
+            <div className="rounded-lg overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51696.04053151535!2d-79.08049061791272!3d35.922438020524176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89acc31c216e7ea7%3A0x7f03bae00443e4cb!2sChapel%20Hill%2C%20NC%2C%20USA!5e0!3m2!1sen!2snp!4v1751393749390!5m2!1sen!2snp" className="md:w-[300px] h-[200px] sm:h-[200px] md:h-[300px] border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div className="mt-4 text-gray-600">
+              <p className="font-medium">Chapel Hill, North Carolina, USA</p>
+            </div>
+          </div>
+          </div>
+
+
       </div>
     </div>
   );

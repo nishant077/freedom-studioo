@@ -118,7 +118,7 @@ const Designed = () => {
 
   return (
     <>
-     <section className="bg-white relative mb-4 md:py-20" ref={ref}>
+     <section className="bg-white relative md:py-10" ref={ref}>
       <div className="container mx-auto px-4 pt-12">
         <h2 className='text-center md:text-4xl text-3xl font-droid'>Client Testimonial</h2>
         <motion.h2 

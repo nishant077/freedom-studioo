@@ -1,6 +1,6 @@
 import React from 'react';
-import logo1 from '../assets/NED_logo2.png';
-import logo2 from '../assets/worldMovement.jpg';
+import logo1 from '../assets/peacedirect.webp';
+import logo2 from '../assets/asiacentre.png';
 import logo3 from '../assets/chevening.png';
 import logo4 from '../assets/ICVA.png';
 import logo5 from '../assets/globalfund.jpeg';
@@ -20,7 +20,7 @@ const Partners = () => {
         <div className='flex flex-col md:flex-row items-center mb-12 gap-8 md:gap-16'>
           <div className='relative'>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-droid font-bold text-gray-900 text-center md:text-left'>
-              Trusted by our <span className='text-yellow-600'>partners</span>
+              Trusted by our <span className='text-[#9a1d20]'>partners</span>
             </h2>
             <div className='hidden md:block absolute -right-8 top-0 w-px h-full bg-gray-300'></div>
           </div>

@@ -7,34 +7,64 @@ import working3 from '../assets/Healing.jpeg';
 import working4 from '../assets/Gallery21.jpeg';
 import working5 from '../assets/Campaign.jpeg';
 import working6 from '../assets/Institution.jpeg';
+import working7 from '../assets/gallery1.jpeg';
+import working8 from '../assets/gallery2.jpeg';
+import working9 from '../assets/Gallery3.jpg';
+import working10 from '../assets/Gallery5.jpeg';
+import working11 from '../assets/Gallery7.jpeg';
+import working12 from '../assets/Gallery14.jpeg';
 import Footer from '../component/Footer';
 
 const StrategyDevelopment = () => {
 
      const offer = [
         {
-          title: 'Co-Creation & Facilitation',
+          title: 'Campaign Storytelling',
           image: working1,
         },
         {
-          title: 'Policy & Governance Design',
+          title: 'Brand Identity & Visual Design',
           image: working2,
         },
         {
-          title: 'Healing Centered Planning & Sessions',
+          title: 'Multimedia Production',
           image: working3,
         },
         {
-          title: 'Equity Driven Systems',
+          title: 'Video and Animation Production',
           image: working4,
         },
         {
-          title: 'Campaign & Advocacy Strategy',
+          title: 'Graphic and Illustration Design',
           image: working5,
         },
         {
-          title: 'Institution Building Support',
+          title: 'Art Services',
           image: working6,
+        },
+        {
+          title: 'Interactive Installations',
+          image: working7,
+        },
+        {
+          title: 'Cultural Production',
+          image: working8,
+        },
+        {
+          title: 'Organize Festivals',
+          image: working9,
+        },
+        {
+          title: 'Design Exhibitions',
+          image: working10,
+        },
+        {
+          title: 'Social Media Strategy',
+          image: working11,
+        },
+        {
+          title: 'Message Development',
+          image: working12,
         },
       ];
   return (
@@ -56,8 +86,7 @@ const StrategyDevelopment = () => {
             WE BUILD WITH INTENTION
             </h3>
             <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl text-white opacity-90 leading-relaxed'>
-            From internal clarity to external impact, we co-create cultures, strategies &
-            policies so you don’t just grow, you lead with purpose.
+            Our communications are grounded in purpose and shaped by relevance, so you don’t just observe, you actively participate.
             </p>
             
          
@@ -74,18 +103,10 @@ const StrategyDevelopment = () => {
 DESIGN"/>
             </div>
             <div className='lg:w-1/2 order-1 lg:order-2'>
-                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-6xl font-bold'>
-                STRATEGY DEVELOPMENT</h2>
+                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>
+               CREATIVE COMMUNICATION</h2>
                 <p className='opacity-80 text-justify  leading-relaxed'>
-                Our Strategy Development services support
-               businesses and social organizations in shaping
-              internal culture and driving external impact. We
-              facilitate collaborative planning processes, cocreate organizational frameworks, and help
-              teams design wellbeing and equity driven
-              policies. We develop healing centered strategies,
-              policies and practices that guide teams in
-              building effective internal culture and effective
-               interventions.
+                We craft communication that moves people, not just to watch or read, but to engage, act, and transform. From powerful campaign storytelling to immersive cultural productions, we bring ideas to life through multimedia, illustrations, video, animation, art curation, and public installations. Whether developing brand identities, designing exhibitions, or amplifying messages on social media, we blend art and advocacy to create stories that resonate and inspire action.
                 </p>
             </div>
         </div>
@@ -95,7 +116,7 @@ DESIGN"/>
   <div className='max-w-7xl mx-auto'>
   
     <div className='text-center mb-16'>
-      <h2 className='mt-5 mb-6 font-droid text-4xl text-white md:text-5xl font-bold'>
+      <h2 className='mt-5 mb-6 font-droid text-3xl text-white md:text-4xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>
