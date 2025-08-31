@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="w-full bg-black text-white border-0 rounded-t-3xl">
       <div className="container mx-auto px-4 py-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {/* Logo and contact info */}
+        
           <div className="flex flex-col items-center md:items-start">
             <img 
               src={logo} 
@@ -37,7 +37,7 @@ const Footer = () => {
             </address>
           </div>
           
-          {/* Social media */}
+        
           <div className="flex flex-col items-center md:items-end">
             <h3 className="text-xl font-droid mb-6 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#9A1D20] after:mt-2 after:mx-auto">
               Follow Us
@@ -46,26 +46,26 @@ const Footer = () => {
               Stay connected with us on social media.
             </p>
             <div className="flex space-x-5">
-              <a href="#" className="text-2xl text-gray-300 hover:text-[#4267B2] transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/freedom.studioo" target="_blank" className="text-2xl text-gray-300 hover:text-[#4267B2] transition-colors" aria-label="Facebook">
                 <FaFacebook />
               </a>
-              <a href="#" className="text-2xl text-gray-300 hover:text-[#000000] transition-colors" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@freedomstudioo?_t=8UWIhaQaQFu&_r=1" target="_blank" className="text-2xl text-gray-300 hover:text-[#000000] transition-colors" aria-label="TikTok">
                 <IoLogoTiktok />
               </a>
-              <a href="#" className="text-2xl text-gray-300 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/freedom.studioo/?igshid=YmMyMTA2M2Y%3D" target="_blank" className="text-2xl text-gray-300 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="#" className="text-2xl text-gray-300 hover:text-[#0077B5] transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/freedomstudioo/" target="_blank" className="text-2xl text-gray-300 hover:text-[#0077B5] transition-colors" aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-              <a href="#" className="text-2xl text-gray-300 hover:text-[#1DA1F2] transition-colors" aria-label="Twitter">
+              <a href="https://x.com/freedomstudioo?t=02Nm9_me28rjVkfIqR6oug&s=09" target="_blank" className="text-2xl text-gray-300 hover:text-[#1DA1F2] transition-colors" aria-label="Twitter">
                 <FaTwitter />
               </a>
             </div>
           </div>
         </div>
         
-        {/* Copyright */}
+      
         <div className="border-t border-gray-600 mt-10 pt-4 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Freedom Studio . All rights reserved.</p>
         </div>

@@ -322,32 +322,6 @@ const Navbar = () => {
                     
                     <motion.div 
                       variants={menuItemVariants}
-                      onHoverStart={() => setHoveredItem('connect')}
-                      onHoverEnd={() => setHoveredItem(null)}
-                    >
-                      <div onClick={handleClick}  className="group flex items-center justify-between">
-                        <p className="text-2xl text-white md:text-4xl font-droid hover:text-gray-400 transition-colors duration-300">
-                          Connect
-                        </p>
-                        <AnimatePresence>
-                          {hoveredItem === 'connect' && (
-                            <motion.div
-                              variants={arrowVariants}
-                              initial="initial"
-                              animate="animate"
-                              exit="exit"
-                              className="text-gray-400 mr-4"
-                            >
-                              <FaArrowRight />
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                      
-                    </motion.div>
-
-                    <motion.div 
-                      variants={menuItemVariants}
                       onHoverStart={() => setHoveredItem('project')}
                       onHoverEnd={() => setHoveredItem(null)}
                     >
@@ -405,7 +379,7 @@ const Navbar = () => {
                   transition={{ delay: 0.5 }}
                 >
                   <motion.a 
-                    href="#" 
+                    href="https://www.facebook.com/freedom.studioo" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     variants={socialIconVariants} 
@@ -418,7 +392,7 @@ const Navbar = () => {
                     </span>
                   </motion.a>
                   <motion.a 
-                    href="#" 
+                    href="https://x.com/freedomstudioo?t=02Nm9_me28rjVkfIqR6oug&s=09" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     variants={socialIconVariants} 
@@ -431,7 +405,7 @@ const Navbar = () => {
                     </span>
                   </motion.a>
                   <motion.a 
-                    href="#" 
+                    href="https://www.instagram.com/freedom.studioo/?igshid=YmMyMTA2M2Y%3D" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     variants={socialIconVariants} 
@@ -444,7 +418,7 @@ const Navbar = () => {
                     </span>
                   </motion.a>
                   <motion.a 
-                    href="#" 
+                    href="https://www.linkedin.com/company/freedomstudioo/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     variants={socialIconVariants} 

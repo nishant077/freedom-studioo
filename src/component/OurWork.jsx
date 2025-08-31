@@ -27,7 +27,7 @@ const OurWork = () => {
 
   return (
     <div className='bg-black w-full h-auto py-10 px-4 md:px-10'>
-      <h2 className='md:text-4xl text-3xl text-white font-droid text-center mb-16'>
+      <h2 className='md:text-4xl text-2xl text-white font-droid text-center mb-16'>
         Gallery
       </h2>
       

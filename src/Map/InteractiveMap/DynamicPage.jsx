@@ -23,16 +23,16 @@ const DynamicPage = () => {
 
     
     useEffect(() => {
-      // Fetch data from the API
+     
       axios.get(`${api}/map/getMovementDetailsById/${id}`)
         .then(response => {
-          console.log('API response:', response.data); // Log the API response
+          console.log('API response:', response.data); 
           setLocation(response.data);
         })
         .catch(error => {
           console.error('Error fetching data:', error);
         });
-    }, [id]); // Re-run the effect when the locationId changes
+    }, [id]); 
 
     console.log(location?.feedback);
     

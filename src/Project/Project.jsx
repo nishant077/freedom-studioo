@@ -11,6 +11,7 @@ import TooSouthern from '../assets/TooSoutherntobefunded.png';
 import Information from '../assets/Gallery15.jpeg';
 import Footer from '../component/Footer';
 
+
 const Project = () => {
   return (
     <>
@@ -217,8 +218,8 @@ const Project = () => {
             </p>
           </div>
         </div>
+         
       </div>
-
       <Footer />
     </>
   );

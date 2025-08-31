@@ -95,11 +95,11 @@ const DigitalDevelopment = () => {
      <div className='py-12 px-4 md:px-8 lg:px-32'>
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
             <div className='lg:w-1/2 order-2 lg:order-1 flex justify-center'>
-                <img src={working2} className='h-auto  w-full object-cover' alt="KNOWLEDGE
-DESIGN"/>
+                <img src={working2} className='h-auto  w-full object-cover' alt="DIGITAL TRANSFORMATION
+"/>
             </div>
             <div className='lg:w-1/2 order-1 lg:order-2'>
-                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>
+                <h2 className='mt-5 mb-6 font-droid text-2xl md:text-4xl font-bold'>
                 DIGITAL TRANSFORMATION</h2>
                 <p className='opacity-80 text-justify  leading-relaxed'>
                 We create digital ecosystems that enable movements, organizations and small businesses to flourish in an ever evolving world. Our approach combines platform development with UX/UI design, civic tech innovation, and data-driven tools to support learning, collaboration, and campaigning. From interactive engagement to secure online spaces, we ensure accessibility, safety, and strategic alignment so that partners digital presence is transformed.
@@ -108,11 +108,11 @@ DESIGN"/>
         </div>
     </div>
   
-    <div className='bg-[#4a4a4a] w-full mb-2 h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
+    <div className='bg-[#4a4a4a] w-full h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
   <div className='max-w-7xl mx-auto'>
   
     <div className='text-center mb-16'>
-      <h2 className='mt-5 mb-6 font-droid text-3xl text-white md:text-4xl font-bold'>
+      <h2 className='mt-5 mb-6 font-droid text-2xl text-white md:text-4xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>

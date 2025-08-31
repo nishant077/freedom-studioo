@@ -135,7 +135,7 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
         <div className="relative bg-white w-full overflow-hidden">
             <div className='md:px-16 lg:px-28 px-4 md:py-10 py-5 pb-16'>
             <h2 
-                    className='text-center md:text-4xl text-3xl font-droid text-gray-800'
+                    className='text-center md:text-4xl text-2xl font-droid'
                 >
                    Who We Are 
                 </h2>
@@ -150,8 +150,8 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
    
     <div className="mt-2 flex justify-center p-4 text-xl">
               <div className="flex items-baseline">
-                <span className="font-droid text-4xl text-[#9a1d20]">S</span>
-                <span className="font-droid text-4xl text-black relative">
+                <span className="font-droid md:text-4xl text-2xl  text-[#9a1d20]">S</span>
+                <span className="font-droid md:text-4xl text-2xl text-black relative">
                   {sCurrentText}
                 </span>
               </div>
@@ -215,9 +215,9 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
 
 
     </div>
-            <div className='py-10 md:py-16 px-4'>
+            <div className='py-3 md:py-5 px-4'>
                 <h2 
-                    className='text-center md:text-4xl text-3xl font-droid text-gray-800'
+                    className='text-center md:text-4xl text-2xl font-droid'
                 >
                     What We Do
                 </h2>
@@ -242,7 +242,7 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
                                 />
                             </div>
                             <div className='md:w-2/3 w-full'>
-                                <h3 className='text-2xl font-droid text-gray-800 mb-4'>{item.title}</h3>
+                                <h3 className='text-2xl font-droid mb-4'>{item.title}</h3>
                                 
                                 <div className='flex flex-wrap gap-2 mb-6'>
                                     {item.tags.map((tag, index) => (

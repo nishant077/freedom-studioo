@@ -99,11 +99,11 @@ const StrategyDevelopment = () => {
      <div className='py-12 px-4 md:px-8 lg:px-32'>
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
             <div className='lg:w-1/2 order-2 lg:order-1 flex justify-center'>
-                <img src={working2} className='h-auto  w-full object-cover' alt="KNOWLEDGE
-DESIGN"/>
+                <img src={working2} className='h-auto  w-full object-cover' alt="CREATIVE COMMUNICATION
+"/>
             </div>
             <div className='lg:w-1/2 order-1 lg:order-2'>
-                <h2 className='mt-5 mb-6 font-droid text-3xl md:text-4xl font-bold'>
+                <h2 className='mt-5 mb-6 font-droid text-2xl md:text-4xl font-bold'>
                CREATIVE COMMUNICATION</h2>
                 <p className='opacity-80 text-justify  leading-relaxed'>
                 We craft communication that moves people, not just to watch or read, but to engage, act, and transform. From powerful campaign storytelling to immersive cultural productions, we bring ideas to life through multimedia, illustrations, video, animation, art curation, and public installations. Whether developing brand identities, designing exhibitions, or amplifying messages on social media, we blend art and advocacy to create stories that resonate and inspire action.
@@ -112,11 +112,11 @@ DESIGN"/>
         </div>
     </div>
  
-    <div className='bg-[#4a4a4a] w-full mb-2 h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
+    <div className='bg-[#4a4a4a] w-full  h-auto py-16 px-4 sm:px-6 lg:px-8 xl:px-28'>
   <div className='max-w-7xl mx-auto'>
   
     <div className='text-center mb-16'>
-      <h2 className='mt-5 mb-6 font-droid text-3xl text-white md:text-4xl font-bold'>
+      <h2 className='mt-5 mb-6 font-droid text-2xl text-white md:text-4xl font-bold'>
         WHAT WE OFFER
       </h2>
       <div className='w-20 h-1 bg-[#9a1d20] mx-auto mb-8'></div>

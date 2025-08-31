@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useScroll } from '../ContextHook/ScrollProvider';
 import { useLocation } from 'react-router-dom';
 
 const FeedbackForm = () => {
@@ -95,7 +94,7 @@ const FeedbackForm = () => {
       <div className='flex md:justify-evenly justify-center items-center flex-wrap gap-4'>
         <div className="max-w-lg w-full">
           <div className="text-center mb-4">
-            <h2 className="md:text-4xl text-3xl text-black font-droid">Work With Us</h2>
+            <h2 className="md:text-4xl text-2xl text-black font-droid">Work With Us</h2>
           </div>
           
           {submitSuccess ? (

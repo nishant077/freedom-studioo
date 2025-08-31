@@ -19,7 +19,7 @@ const Partners = () => {
         {/* Header with vertical line */}
         <div className='flex flex-col md:flex-row items-center mb-12 gap-8 md:gap-16'>
           <div className='relative'>
-            <h2 className='text-3xl md:text-4xl lg:text-5xl font-droid font-bold text-gray-900 text-center md:text-left'>
+            <h2 className='text-2xl md:text-4xl lg:text-5xl font-droid font-bold  text-center md:text-left'>
               Trusted by our <span className='text-[#9a1d20]'>partners</span>
             </h2>
             <div className='hidden md:block absolute -right-8 top-0 w-px h-full bg-gray-300'></div>

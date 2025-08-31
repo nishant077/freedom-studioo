@@ -55,7 +55,7 @@ const Designed = () => {
     return () => cancelAnimationFrame(requestRef.current);
   }, [scrollPos, isHovered]);
 
-  // Save position when hover starts
+
   const handleMouseEnter = () => {
     if (containerRef.current) {
       setScrollPos(containerRef.current.scrollLeft);
@@ -120,7 +120,7 @@ const Designed = () => {
     <>
      <section className="bg-white relative md:py-10" ref={ref}>
       <div className="container mx-auto px-4 pt-12">
-        <h2 className='text-center md:text-4xl text-3xl font-droid'>Client Testimonial</h2>
+        <h2 className='text-center md:text-4xl text-2xl font-droid'>Client Testimonial</h2>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={controls}

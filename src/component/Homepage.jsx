@@ -164,7 +164,7 @@ const Homepage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className='font-droid text-white text-center text-3xl md:text-4xl'
+            className='font-droid text-white text-center text-2xl md:text-4xl'
           >
             Movement Map 
           </motion.h2>

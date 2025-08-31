@@ -1,0 +1,99 @@
+/* Team.css */
+  
+  .team-swiper {
+    width: 100%;
+    padding: 50px 0 70px 0;
+  }
+  
+  .team-card {
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  
+  .team-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+  }
+  
+  .team-image {
+    transition: transform 0.7s ease;
+  }
+  
+  .team-overlay {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .team-card:hover .team-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .team-socials {
+    transform: translateX(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .team-card:hover .team-socials {
+    transform: translateX(0);
+  }
+  
+  .team-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .team-bullet-active {
+    background: #FF6B6B;
+    transform: scale(1.4);
+  }
+  
+  .team-swiper-button-next:hover,
+  .team-swiper-button-prev:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animation for card entrance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .team-card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .team-swiper {
+      padding: 30px 0 50px 0;
+    }
+    
+    .team-card {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

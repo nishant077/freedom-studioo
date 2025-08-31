@@ -20,7 +20,7 @@ const KeyImpact = () => {
       className='bg-[#4A4A4A] w-full h-auto px-5 py-2 mt-1'
     >
      <div className='text-white mt-20 px-5 md:px-10 lg:px-20'>
-      <h2 className='text-center text-3xl md:text-4xl font-droid'>Our Impact</h2>
+      <h2 className='text-center text-2xl md:text-4xl font-droid'>Impact</h2>
 
       {/* Impact Box */}
        <div className='px-5 md:px-20 py-5 mt-5 rounded-lg'>
@@ -30,16 +30,11 @@ const KeyImpact = () => {
            <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-px bg-white"></div>
            <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3/4 bg-white"></div>
            
-           <div className="md:hidden absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-3/4 h-px bg-white"></div>
-           <div className="md:hidden absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 w-3/4 h-px bg-white"></div>
+           {/* <div className="md:hidden absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-3/4 h-px bg-white"></div>
+           <div className="md:hidden absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 w-3/4 h-px bg-white"></div> */}
 
            {/* FS Logo */}
            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center w-16 h-16 rounded-full bg-black border-2 border-white">
-             <span className="text-white text-xl font-bold">FS</span>
-           </div>
-
-           {/* FS Text - Mobile */}
-           <div className="md:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-black border-2 border-white">
              <span className="text-white text-xl font-bold">FS</span>
            </div>
 

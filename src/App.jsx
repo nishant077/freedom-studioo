@@ -3,7 +3,6 @@ import './App.css';
 import Homepage from './component/Homepage';
 import About from './About/About';
 import Service from './Services/Service';
-import Connect from './Connect/Connect';
 import DynamicPage from './Map/InteractiveMap/DynamicPage';
 import MapMain from './Map/MapMain';
 import Happening from './Map/InteractiveMap/Happening';
@@ -20,13 +19,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Navigation /> */}
         <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Service />} />
           <Route path="/about" element={<About />} />
-          <Route path="/connect" element={<Connect />} />
           <Route path="/dynamic/:id" element={<DynamicPage />} />
           <Route path="/map" element={<MapMain />} />
           <Route path='/happening' element={<Happening/>}/>
