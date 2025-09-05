@@ -115,9 +115,6 @@ const Team = () => {
                 </div>
                 
                 <div className="p-6 text-center relative">
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#9a1d20] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">{index + 1}</span>
-                  </div>
                   <h3 className="text-xl font-droid text-black mb-1 mt-2">{member.name}</h3>
                   <p className="text-[#9a1d20] text-sm font-medium mb-3">{member.role}</p>
                   {/* <div className="flex justify-center space-x-2">
