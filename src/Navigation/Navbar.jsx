@@ -146,7 +146,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="Logo" 
-              className='h-20 md:h-24 w-56 object-cover' 
+              className='h-20 md:h-24 md:w-56 w-44 object-cover' 
             />
           </Link>
         </div>
@@ -168,7 +168,8 @@ const Navbar = () => {
               <IoClose className='text-3xl md:text-4xl text-white' />
             </motion.div>
           ) : (
-            <GiHamburgerMenu className='text-2xl md:text-3xl text-white' />
+            <GiHamburgerMenu className='text-xl md:text-2xl text-white' />
+
           )}
         </motion.button>
       </div>
