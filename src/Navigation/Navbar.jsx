@@ -258,8 +258,35 @@ const Navbar = () => {
                         </AnimatePresence>
                       </Link>
                     </motion.div>
+
+                    {/* Service */}
+
+                     <motion.div 
+                      variants={menuItemVariants}
+                      onHoverStart={() => setHoveredItem('services')}
+                      onHoverEnd={() => setHoveredItem(null)}
+                    >
+                      <Link to="/services" onClick={toggleMenu} className="group flex items-center justify-between">
+                        <p className="text-2xl text-white md:text-4xl font-droid hover:text-gray-400 transition-colors duration-300">
+                          Service
+                        </p>
+                        <AnimatePresence>
+                          {hoveredItem === 'services' && (
+                            <motion.div
+                              variants={arrowVariants}
+                              initial="initial"
+                              animate="animate"
+                              exit="exit"
+                              className="text-gray-400 mr-4"
+                            >
+                              <FaArrowRight />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </Link>
+                    </motion.div>
                     
-                    <motion.div 
+                    {/* <motion.div 
                       variants={menuItemVariants}
                       onHoverStart={() => setHoveredItem('services')}
                       onHoverEnd={() => setHoveredItem(null)}
@@ -319,8 +346,36 @@ const Navbar = () => {
                           )}
                         </AnimatePresence>
                       </div>
+                    </motion.div> */}
+
+
+                    {/* connect */}
+                   
+                    <motion.div 
+                      variants={menuItemVariants}
+                      onHoverStart={() => setHoveredItem('connect')}
+                      onHoverEnd={() => setHoveredItem(null)}
+                    >
+                      <Link to="/connect" onClick={toggleMenu} className="group flex items-center justify-between">
+                        <p className="text-2xl text-white md:text-4xl font-droid hover:text-gray-400 transition-colors duration-300">
+                          Connect
+                        </p>
+                        <AnimatePresence>
+                          {hoveredItem === 'connect' && (
+                            <motion.div
+                              variants={arrowVariants}
+                              initial="initial"
+                              animate="animate"
+                              exit="exit"
+                              className="text-gray-400 mr-4"
+                            >
+                              <FaArrowRight />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </Link>
                     </motion.div>
-                    
+
                     <motion.div 
                       variants={menuItemVariants}
                       onHoverStart={() => setHoveredItem('project')}
@@ -352,7 +407,7 @@ const Navbar = () => {
                     >
                       <Link to="/learning-corner" onClick={toggleMenu} className="group flex items-center justify-between">
                         <p className="text-2xl text-white md:text-4xl font-droid hover:text-gray-400 transition-colors duration-300">
-                        Movement Media
+                        Movement Research Center
                         </p>
                         <AnimatePresence>
                           {hoveredItem === 'learning' && (

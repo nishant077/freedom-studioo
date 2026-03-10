@@ -9,9 +9,11 @@ import logo7 from '../assets/IRI.png';
 import logo8 from '../assets/Moleskine.avif';
 import logo9 from '../assets/google.webp';
 import logo10 from '../assets/asiaFoundation.jpg';
+import logo11 from '../assets/artlordslogo.png';
+import logo12 from '../assets/nedlogo.png'
 
 const Partners = () => {
-  const partnersLogo = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10];
+  const partnersLogo = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,logo11, logo12];
 
   return (
     <div className='bg-white w-full h-auto py-12 px-4 md:px-8 lg:px-16'>

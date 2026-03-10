@@ -13,7 +13,7 @@ import FeedbackForm from '../About/FeedbackForm';
 import AnimatedVideos from './AnimatedVideos';
 
 const Homepage = () => {
-  const headline = "Freedom Studio is a civic media agency that offers strategic, creative and digital solutions to social movements, nonprofit organizations, ethical businesses worldwide. "
+  const headline = "Freedom Studio is a civic media agency that offers strategic, creative, digital support to grassroots organizations worldwide. "
   
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -158,7 +158,7 @@ const Homepage = () => {
           className='bg-[#9A1D20] w-full h-10'
         ></motion.div>
 
-        <div className='section2 bg-black w-full py-16 px-6 md:px-36'>
+        {/* <div className='section2 bg-black w-full py-16 px-6 md:px-36'>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -173,14 +173,13 @@ const Homepage = () => {
               <HomePageMap/>
             </a>
           </div>
-        </div>
+        </div> */}
         
         <Expertise/>
         <KeyImpact/>
         <Designed />
         <AnimatedVideos/>
         <OurWork/>
-        <FeedbackForm/>
         <Footer/>
       </div>
     </>
