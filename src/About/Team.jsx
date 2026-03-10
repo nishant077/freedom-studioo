@@ -108,10 +108,10 @@ const Team = () => {
                     </a>
                   </div> */}
                   
-                  <div className="team-overlay absolute bottom-0 left-0 right-0 p-6 text-white">
+                  {/* <div className="team-overlay absolute bottom-0 left-0 right-0 p-6 text-white">
                     <FaQuoteLeft className="text-2xl mb-3 text-[#9a1d20]" />
                     <p className="text-sm font-light italic leading-relaxed">{member.quote}</p>
-                  </div>
+                  </div> */}
                 </div>
                 
                 <div className="p-6 text-center relative">

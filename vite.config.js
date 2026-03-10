@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.png', '**/*.PNG', '**/*.JPG'],
+  preview: {
+    allowedHosts: ['www.studiofreedom.org'],
+  },
 })
