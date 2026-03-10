@@ -20,14 +20,14 @@ const Expertise = () => {
             image: image1,
             title: 'STRATEGIC DESIGN',
             path:'/services/knowledge-design',
-            description: 'From internal clarity to external impact, we co-create cultures, strategies & policies so you don’t just grow, you lead with purpose.',
+            description: 'From internal clarity to external impact, we co-create cultures, strategies & policies for organizations and projects.',
             tags: ['Quantitative and Qualitative Research', 'Data Analysis and Visualization', 'Campaign Co-creation & Facilitation', 'Policy & Governance Design', 'Stakeholders Mapping','Program and Advocacy Planning', 'System Mapping','Design Thinking', 'Facilitating Strategic Retreats','Visualizing Systems','Co-developing Theories of Change','Curriculum and Workbook Design','Institution Building Support']
         },
         {
             image: image2,
             title: 'CREATIVE COMMUNICATION',
             path:'/services/strategy-development',
-            description: 'Our communications are grounded in purpose and shaped by relevance, so you don’t just observe, you actively participate.',  
+            description: 'Our communications are grounded in purpose and shaped by relevance, so that your audience engages along with you.',  
 
             tags: ['Campaign Storytelling',
                    'Brand Identity & Visual Design',
@@ -46,7 +46,7 @@ const Expertise = () => {
             image: image3,
             title: 'DIGITAL TRANSFORMATION',
             path:'/services/digital-communication',
-            description: 'We build meaningful digital systems, so movements and organizations don’t just adapt; they thrive in a rapidly changing world.', 
+            description: 'We design meaningful technology infrastructure, so that your organizations thrive in a rapidly changing world.', 
 
             tags: ['Website & Platform Development',
   'Digital Ecosystem Strategy',
@@ -133,7 +133,7 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
 
     return (
         <div className="relative bg-white w-full overflow-hidden">
-            <div className='md:px-16 lg:px-28 px-4 md:py-10 py-5 pb-16'>
+            <div className='md:px-16 lg:px-28 px-4 md:py-10 py-5'>
             <h2 
                     className='text-center md:text-4xl text-3xl font-droid text-gray-800'
                 >
@@ -141,27 +141,14 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
                 </h2>
             <div className="flex justify-center items-center mt-4">
   <div className="w-full md:w-3/4 h-auto border-0 rounded-lg p-4">
-    <p className="text-base font-light text-center">
-    To help ethical brands, grassroots movements, and social organizations  
-    show up with <span className='text-[#9a1d20] font-bold'>clarity, creativity, and consciousness.</span> 
-      <br></br>
-      For more people. In more places. With more purpose.
-    </p>
-   
-    <div className="mt-2 flex justify-center p-4 text-xl">
-              <div className="flex items-baseline">
-                <span className="font-droid text-4xl text-[#9a1d20]">S</span>
-                <span className="font-droid text-4xl text-black relative">
-                  {sCurrentText}
-                </span>
-              </div>
-            </div>
+  <p className='text-base font-medium text-center'>Artists. Innovators. Experimenters. Digital Media Pros. Organizers. Creatives. Tech Freaks. Campaigners. Advocates. Activists. Healers. </p>
+
            
   </div>
 </div>
-     
+{/*      
      <h3 className='font-droid text-xl text-center md:mt-3 mt-1'>The Freedom Formula:</h3>
-      <p className='text-center text-xl font-medium opacity-85'>Our signature approach weaves together four driving forces: </p>
+      <p className='text-center text-xl font-medium opacity-85'>Our signature approach weaves together four driving forces: </p> */}
 
 {/* <div className='flip-card-container md:flex md:justify-around mt-5 flex-wrap flex justify-center items-center gap-4 cursor-pointer md:mb-4'>
       {data2.map((item, key) => (
@@ -186,7 +173,7 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
       ))}
     </div> */}
 
-<div className='card-container px-4 py-8 md:px-8 lg:px-12 w-full'>
+{/* <div className='card-container px-4 py-8 md:px-8 lg:px-12 w-full'>
   <div className='max-w-7xl mx-auto'>
     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8'>
       {data2.map((item, key) => (
@@ -210,17 +197,35 @@ const sWordParts = ['TRATEGY ', 'TORY ', 'YSTEMS ', 'OULS '];
       ))}
     </div>
   </div>
-</div>
+</div> */}
 
 
 
     </div>
-            <div className='py-10 md:py-16 px-4'>
+            <div className='py-5 md:py-16 px-4'>
                 <h2 
                     className='text-center md:text-4xl text-3xl font-droid text-gray-800'
                 >
                     What We Do
                 </h2>
+                  <div className="mt-2 flex justify-center p-4 text-xl">
+              <div className="flex items-baseline">
+                <span className="font-droid font-medium text-2xl">We connect <span className='text-[#9a1d20] font-droid'>S</span></span>
+                <span className="font-droid font-medium text-2xl text-black relative">
+                  {sCurrentText}
+                </span>
+              </div>
+            </div>
+                     <div className="flex justify-center items-center mt-2">
+  <div className="w-full md:w-3/4 h-auto border-0 rounded-lg">
+    <p className="text-base font-light text-center">
+    We help organizations show up with       <span className='text-[#9a1d20] font-bold'>clarity, creativity, and consciousness.</span> 
+      <br></br>
+      For more people. In more places. With more purpose.
+    </p>
+           
+  </div>
+</div>
             </div>
             
             <div 

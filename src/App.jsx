@@ -7,9 +7,9 @@ import Connect from './Connect/Connect';
 import DynamicPage from './Map/InteractiveMap/DynamicPage';
 import MapMain from './Map/MapMain';
 import Happening from './Map/InteractiveMap/Happening';
-import KnowledgeDesign from './Services/KnowledgeDesign';
-import StrategyDevelopment from './Services/StrategyDevelopment';
-import DigitalDevelopment from './Services/DigitalDevelopment';
+// import KnowledgeDesign from './Services/KnowledgeDesign';
+// import StrategyDevelopment from './Services/StrategyDevelopment';
+// import DigitalDevelopment from './Services/DigitalDevelopment';
 import Project from './Project/Project';
 import LearningCorner from './LearningCorner/LearningCorner';
 import VideoSeries from './Map/InteractiveMap/VideoSeries';
@@ -26,14 +26,15 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Service />} />
           <Route path="/about" element={<About />} />
+           <Route path="/services" element={<Service />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/dynamic/:id" element={<DynamicPage />} />
           <Route path="/map" element={<MapMain />} />
           <Route path='/happening' element={<Happening/>}/>
           <Route path='/videos' element={<VideoSeries/>}/>
-          <Route path='/services/knowledge-design' element={<KnowledgeDesign/>}/>
+          {/* <Route path='/services/knowledge-design' element={<KnowledgeDesign/>}/>
           <Route path='/services/strategy-development' element={<StrategyDevelopment/>}/>
-          <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/>
+          <Route path='/services/digital-communication' element={<DigitalDevelopment/>}/> */}
           <Route path='/project' element={<Project/>}/>
          <Route path='/learning-corner' element={<LearningCorner/>}/>
         </Routes>

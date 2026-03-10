@@ -5,7 +5,7 @@ import logo from '../assets/logo.PNG'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white border-0 rounded-t-3xl">
+    <footer className="w-full bg-black text-white border-0 pt-5">
       <div className="container mx-auto px-4 py-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Logo and contact info */}

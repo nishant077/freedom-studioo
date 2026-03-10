@@ -6,11 +6,13 @@ import Team from './Team';
 import Partners from './Partners';
 import Footer from '../component/Footer';
 import AboutGallery from './AboutGallery';
+import SolveProblem from './SolveProblem';
+import FreedomFormula from './FreedomFormula';
 
 const About = () => {
   return (
     <>
-      <div className='bg-black min-h-screen'>
+      <div className='bg-black h-screen'>
         <Navbar/>
         
      
@@ -99,15 +101,11 @@ const About = () => {
           </div>
         </div>
         
-    
-        <div className='flex justify-center mt-5 lg:mt-12 mb-12'>
-          <div className="flex items-center justify-center w-10 h-10 rounded-full border-white border-2 cursor-pointer animate-bounce">
-            <IoArrowDownOutline color="white" size={24} />
-          </div>
-        </div>
       </div>
       
       <AboutGallery/>
+      <SolveProblem/>
+      <FreedomFormula/>
       <Team/>
       <Partners/>
       <Footer/>
